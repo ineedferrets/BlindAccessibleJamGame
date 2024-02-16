@@ -8,6 +8,10 @@ public class MainMenuManager : MonoBehaviour
     public string GameSceneName;
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(GameSceneName);
+        SceneChanger sceneChanger = SceneChanger.Instance;
+        if (sceneChanger == null)
+            SceneManager.LoadSceneAsync(GameSceneName);
+        else
+            sceneChanger.ChangeScene(GameSceneName);
     }
 }

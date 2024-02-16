@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class DialogueBoxController : MonoBehaviour
 {
-    public static DialogueBoxController instance;
+    public static DialogueBoxController instance {  get; private set; }
 
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI nameText;
@@ -31,6 +31,7 @@ public class DialogueBoxController : MonoBehaviour
 
     public void StartDialogue(DialogueAsset dialogueAsset, int startPosition)
     {
+        if (dialogueAsset == null){ return; }
         dialogueBox.gameObject.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(RunDialogue(dialogueAsset, startPosition));

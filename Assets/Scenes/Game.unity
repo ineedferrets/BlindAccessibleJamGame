@@ -2317,7 +2317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopMenuGroup: {fileID: 971358974}
-  dialogueAsset: {fileID: 11400000, guid: 87464804dadef9e4a83f4e75a86540cd, type: 2}
+  inventoryMenuGroup: {fileID: 778913779}
+  dialogueAsset: {fileID: 11400000, guid: 7f229d728982b05488c6f6ead86b5379, type: 2}
 --- !u!1001 &386647606
 PrefabInstance:
   m_ObjectHideFlags: 0

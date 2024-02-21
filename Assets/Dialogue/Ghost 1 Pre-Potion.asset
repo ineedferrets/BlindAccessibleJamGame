@@ -82,8 +82,8 @@ MonoBehaviour:
   - speakerName: Eleonora
     dialogueText: "I.. I have someone very important for me on the other side.\r\nThey
       are waiting for me.\r\nThey have been waiting for the past 10 years.\r\nBut
-      I couldn\u2019t get to the other side.\r\nNot in this state.\r\nNot how I am.\r\n*starts
-      crying*\r"
+      I couldn\u2019t get to the other side.\r\nNot in this state. Not how I am.
+      *starts crying*\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -102,7 +102,8 @@ MonoBehaviour:
     portraitOnLeft: 0
   - speakerName: Dr. Charon
     dialogueText: "Let\u2019s start from the top.\r\nYou break into my garden.\r\nYou
-      scare the crap out of me.\r\nAnd then you ask for my help?\r\nDid I miss something?\r\nNo?\r\nGood."
+      scare the crap out of me.\r\nAnd then you ask for my help?\r\nDid I miss something?
+      No? Good."
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -143,11 +144,20 @@ MonoBehaviour:
   - speakerName: Eleonora
     dialogueText: "WHAT\u2019S THE DAMN PRICE?\r\nMy two kids have been on the other
       side for 10 years.\r\nI could hear their screams that night.\r\nThe house was
-      burning like a pyre.\r\nThey were playing with candles.\r\nOh, how sweet and
-      innocent they looked.\r\nThe light shining in their sweet blue eyes.\r\n But
-      then\u2026 then\u2026\r\n*starts crying*\r\nThey both stumbled upon the rug\u2026\r\nThe
-      candles touched their clothes\u2026\r\nAnd\u2026\r\nAnd\u2026\r\nIt was all
-      my fault.\r\nI\u2026 I just want to see them again.\r\nPlease.\r"
+      burning like a pyre.\r\nThey were playing with candles.\r\r"
+    dialogueSpeed: 15
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Eleonora
+    dialogueText: "Oh, how sweet and innocent they looked.\r\nThe light shining in
+      their sweet blue eyes.\r\nBut then\u2026 then\u2026\r\n*starts crying*\r\nThey
+      both stumbled upon the rug\u2026\r"
+    dialogueSpeed: 15
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Eleonora
+    dialogueText: "The candles touched their clothes\u2026\r\nAnd\u2026\r\nAnd\u2026\r\nIt
+      was all my fault.\r\nI\u2026 I just want to see them again. Please."
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -169,7 +179,7 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Eleonora
-    dialogueText: "Of course it is!\r\nTheir blue eyes.\r\nTheir shiny blonde hair.\r\nTheir
+    dialogueText: "Of course it is!\r\nTheir blue eyes. Their shiny blonde hair.\r\nTheir
       warm\u2026 soft faces.\r\nThey were just 5 years old.\r\nAnd the Gods took
       them away from me *starts crying*\r"
     dialogueSpeed: 15
@@ -179,9 +189,14 @@ MonoBehaviour:
     dialogueText: "That\u2019s the problem, Eleonora.\r\nThat\u2019s why I can\u2019t
       help you.\r\nBecause you\u2019d have to pay a price.\r\nAnd the price is your
       memories about the most precious thing for you.\r\nYou\u2019ll lose everything
-      you knew about them.\r\nYou\u2019ll meet them.\r\nBut you won\u2019t know who
-      they are.\r\nAnd they won\u2019t know who you are.\r\nThe process goes both
-      ways.\r\nYou\u2019ll\u2026 you\u2019ll truly be a ghost."
+      you knew about them.\r"
+    dialogueSpeed: 15
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "You\u2019ll meet them.\r\nBut you won\u2019t know who they are.\r\nAnd
+      they won\u2019t know who you are.\r\nThe process goes both ways.\r\nYou\u2019ll\u2026
+      you\u2019ll truly be a ghost.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -204,8 +219,8 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "Yes.\r\nI hate this power.\r\nThis\u2026 this curse.\r\nIts rules.\r\nIts
-      very existence!\r\nI\u2026 I truly want to help you.\r\nBut I fear it will
+    dialogueText: "Yes. I hate this power.\r\nThis\u2026 this curse.\r\nIts rules.
+      Its very existence!\r\nI\u2026 I truly want to help you.\r\nBut I fear it will
       do you more harm.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
@@ -213,9 +228,13 @@ MonoBehaviour:
   - speakerName: Eleonora
     dialogueText: "I\u2026 I think I\u2019ve made my decision.\r\nI want you to help
       me get to the other side.\r\nWhat point in suffering here?\r\nKnowing they\u2019re
-      over there?\r\nWhen I can get to them.\r\nI\u2019m sure we\u2019ll learn to
-      love each other again.\r\nI\u2019m sure.. I\u2019m sure\u2026 I\u2019m *starts
-      crying*\r"
+      over there?\r\nWhen I can get to them.\r\r"
+    dialogueSpeed: 15
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Eleonora
+    dialogueText: "I\u2019m sure we\u2019ll learn to love each other again.\r\nI\u2019m
+      sure.. I\u2019m sure\u2026 I\u2019m *starts crying*\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0

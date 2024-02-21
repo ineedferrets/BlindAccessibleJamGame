@@ -7,8 +7,6 @@ public class ShopMenuController : MonoBehaviour
 {
     [SerializeField, Header("Shop Menu")] CanvasGroup shopMenuGroup;
 
-    [SerializeField, Header("Inventory")] CanvasGroup inventoryMenuGroup;
-
     [SerializeField, Header("Dialogue")] DialogueAsset dialogueAsset;
 
     private void Start()
@@ -45,18 +43,11 @@ public class ShopMenuController : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (inventoryMenuGroup == null) { return; }
+        InventoryManager inventoryManager = InventoryManager.Instance;
+        if (inventoryManager == null) { return; }
 
-        bool bIsActive = inventoryMenuGroup.gameObject.activeSelf;
+        bool bIsNowActive = inventoryManager.ToggleInventory();
 
-        shopMenuGroup.interactable = bIsActive;
-        inventoryMenuGroup.gameObject.SetActive(!bIsActive);
-
-        if (!bIsActive)
-        {
-            InventoryManager inventoryManager = InventoryManager.Instance;
-            if (inventoryManager == null) { return; }
-            inventoryManager.ListItems();
-        }
+        shopMenuGroup.interactable = !bIsNowActive;
     }
 }

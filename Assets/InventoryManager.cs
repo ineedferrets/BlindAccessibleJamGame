@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +10,12 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public List<Item> items = new List<Item>();
 
+    public CanvasGroup inventoryUI;
+
     public Transform ItemContent;
     public GameObject InventoryItem;
+
+    public Button returnButton;
 
     private void Awake()
     {
@@ -21,6 +27,8 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        DontDestroyOnLoad(this);
     }
 
     public void Add(Item item)
@@ -33,18 +41,68 @@ public class InventoryManager : MonoBehaviour
         items.Remove(item);
     }
 
+    public bool ToggleInventory()
+    {
+        if (inventoryUI == null) { return false;  }
+
+        bool bUIIsActive = inventoryUI.gameObject.activeSelf;
+
+        inventoryUI.gameObject.SetActive(!bUIIsActive);
+
+        if (!bUIIsActive)
+            ListItems();
+
+        return !bUIIsActive;
+    }
+
     public void ListItems()
     {
+        foreach (Transform Item in ItemContent)
+        {
+            Destroy(Item.gameObject);
+        }
+
+        if (returnButton == null)
+        {
+            return;
+        }
+
+        Button prevButton = returnButton;
+        Button secondPrevButton = null;
+
         foreach (Item item in items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            Text itemName = obj.transform.Find("Item/ItemName").GetComponent<Text>();
-            Image itemIcon = obj.transform.Find("Item/ItemIcon").GetComponent<Image>();
 
-            Debug.Log("Actual Item Name: " + item.name);
-            Debug.Log("Actual Item Sprite: " + item.icon.ToString());
-            Debug.Log("Found Item Text: " + itemName);
-            Debug.Log("Found Item Sprite: " + itemIcon.ToString());
+            Button newButton = obj.GetComponent<Button>();
+            if (newButton && prevButton)
+            {
+                Navigation customNav = new Navigation();
+                customNav.mode = Navigation.Mode.Explicit;
+                customNav.selectOnUp = secondPrevButton;
+                customNav.selectOnDown = newButton;
+                prevButton.navigation = customNav;
+            }
+
+            if (item == items.Last())
+            {
+                Navigation customNav = new Navigation();
+                customNav.mode = Navigation.Mode.Explicit;
+                customNav.selectOnUp = prevButton;
+                customNav.selectOnDown = returnButton;
+                newButton.navigation = customNav;
+
+                customNav.selectOnUp = newButton;
+                customNav.selectOnDown = returnButton.FindSelectableOnDown();
+                returnButton.navigation = customNav;
+
+            }
+
+            secondPrevButton = prevButton;
+            prevButton = newButton;
+
+            var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
+            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;

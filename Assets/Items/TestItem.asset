@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestItem
   m_EditorClassIdentifier: 
   id: 0
-  itemName: 
+  itemName: NewItem
   icon: {fileID: 21300000, guid: 330acf833e5e0414c8f12fc65060fb65, type: 3}

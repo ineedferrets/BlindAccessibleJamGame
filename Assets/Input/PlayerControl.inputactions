@@ -33,9 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Skip",
+                    "name": "Inventory",
                     "type": "Button",
-                    "id": "240f07a9-cad0-4de3-9305-54a27239764f",
+                    "id": "ab511700-7e41-4af9-8b17-d09bc414e09d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -221,23 +221,23 @@
                 },
                 {
                     "name": "",
-                    "id": "06cf854a-52cf-439f-9d30-e67dc99217be",
-                    "path": "<Keyboard>/space",
+                    "id": "e176c033-2d60-43cf-a454-340b40e41e9f",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Skip",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "c889d0c9-19a4-4677-8d94-14a8286128ed",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "5ad70f76-1452-453b-87fd-9ff490c4754d",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Skip",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -333,6 +333,15 @@
                     "type": "PassThrough",
                     "id": "8a0bb991-9fc9-443b-922c-565d59d4e5b2",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InventoryButton",
+                    "type": "Button",
+                    "id": "f4bd2994-3f3b-4a72-8155-a5fc7a299362",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -765,6 +774,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb89c17c-848a-41ff-933e-2855a61c230e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "InventoryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f2c376c-9fbe-49ee-8fbf-67cd59c29fbd",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "InventoryButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

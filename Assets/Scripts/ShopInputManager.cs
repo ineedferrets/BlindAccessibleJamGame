@@ -22,7 +22,7 @@ public class PlayerControllerComponent : MonoBehaviour
     {
         DialogueBoxController dialogueBoxController = DialogueBoxController.instance;
 
-        if (dialogueBoxController != null ) { DialogueBoxController.instance.SkipLine(); }
+        if (dialogueBoxController != null) { DialogueBoxController.instance.SkipLine(context); }
     }
 
     public void ToggleMenuControls()

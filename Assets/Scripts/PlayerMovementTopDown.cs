@@ -17,10 +17,28 @@ public class PlayerTopDownController : MonoBehaviour
 
     TeleportTriggerVolumeComponent currentTriggerCollision = null;
 
+    List<InteractableComponent> interactables = new List<InteractableComponent>();
+
+    public enum ControlScheme
+    {
+        WorldControls,
+        MenuControls,
+        DialogueControls
+    }
+
       // Start is called before the first frame update
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
+        DialogueBoxController.OnDialogueStarted += EnterDialogueControls;
+        DialogueBoxController.OnDialogueEnded += ExitDialogueControls;
+    }
+
+    private void OnDestroy()
+    {
+        DialogueBoxController.OnDialogueStarted -= EnterDialogueControls;
+        DialogueBoxController.OnDialogueEnded -= ExitDialogueControls;
     }
 
     // Update is called once per frame
@@ -45,6 +63,10 @@ public class PlayerTopDownController : MonoBehaviour
     {
         if (context.performed)
         {
+            if (interactables.Count > 0)
+            {
+                interactables[0].Interact();
+            }
             if (currentTriggerCollision)
             {
                 TeleportPlayer();
@@ -53,18 +75,25 @@ public class PlayerTopDownController : MonoBehaviour
     }
 
     // PAUSE MENU CODE ----------------------------------------------
+    public void InputToggleMenuControls(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            ToggleMenuControls();
+        }
+    }
+    
     public void ToggleMenuControls()
     {
         if (playerInput != null)
         {
             if (playerInput.currentActionMap == playerInput.actions.FindActionMap("UI"))
             {
-                playerInput.SwitchCurrentActionMap("Player");
-
+                SetControlScheme(ControlScheme.WorldControls);
             }
             else
             {
-                playerInput.SwitchCurrentActionMap("UI");
+                SetControlScheme(ControlScheme.MenuControls);
             }
         }
     }
@@ -85,5 +114,39 @@ public class PlayerTopDownController : MonoBehaviour
 
         Camera.main.gameObject.SetActive(false);
         currentTriggerCollision.toChangeCameraTo.gameObject.SetActive(true);
+    }
+
+    // INTERACTION CODE ----------------------------------------------
+    public void AddInteractable(InteractableComponent newComponent)
+    {
+        if (!interactables.Contains(newComponent))
+        {
+            interactables.Add(newComponent);
+        }
+    }
+
+    public void RemoveInteractable(InteractableComponent interactable)
+    {
+        interactables.Remove(interactable);
+    }
+
+    // DIALOGUE CODE ----------------------------------------------
+    public void EnterDialogueControls() { SetControlScheme(ControlScheme.DialogueControls); }
+    public void ExitDialogueControls() { SetControlScheme(ControlScheme.WorldControls); }
+
+    public void SetControlScheme(ControlScheme control)
+    {
+        switch(control)
+        {
+            case ControlScheme.WorldControls:
+                playerInput.SwitchCurrentActionMap("Player");
+                break;
+            case ControlScheme.MenuControls:
+                playerInput.SwitchCurrentActionMap("UI");
+                break;
+            case ControlScheme.DialogueControls:
+                playerInput.SwitchCurrentActionMap("Dialogue");
+                break;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
@@ -26,8 +27,18 @@ public class PauseMenuController : MonoBehaviour
         allCanvasGroups.Remove(pauseMenuGroup);
     }
 
+    public void InputTogglePauseMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            TogglePauseMenu();
+        }
+
+    }
+
     public void TogglePauseMenu()
     {
+        Debug.Log("Toggling Pause Menu");
         bool bIsPauseMenuOpen = pauseMenuGroup.gameObject.activeSelf;
 
         foreach (CanvasGroup canvas in allCanvasGroups)

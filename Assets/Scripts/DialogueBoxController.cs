@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 
 public class DialogueBoxController : MonoBehaviour
@@ -17,6 +19,7 @@ public class DialogueBoxController : MonoBehaviour
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
 
+  
     private void Awake()
     {
         if (instance == null)
@@ -83,8 +86,11 @@ public class DialogueBoxController : MonoBehaviour
         }
     }
 
-    public void SkipLine()
+    public void SkipLine(InputAction.CallbackContext context)
     {
-        skipLineTriggered = true;
+        if (context.performed)
+        {
+            skipLineTriggered = true;
+        }
     }
 }

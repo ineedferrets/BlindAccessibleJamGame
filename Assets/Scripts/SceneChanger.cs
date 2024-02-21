@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +19,14 @@ public class SceneChanger : MonoBehaviour
     public float fadeDelay;
     public float fadeDuration;
 
+    public static event Action OnTransitionMidway;
+
     private FadeStatus currentFadeStatus = FadeStatus.none;
     private float fadeTimer;
     private string sceneToLoad;
+    private bool bChangeScene = false;
+    private GameObject _oldCamera;
+    private GameObject _newCamera;
 
     private struct ImageInformation
     {
@@ -68,6 +74,14 @@ public class SceneChanger : MonoBehaviour
     {
         sceneToLoad = _name;
         currentFadeStatus = FadeStatus.fading_out;
+        bChangeScene = true;
+    }
+
+    public void ChangeCamera(GameObject oldCamera, GameObject newCamera)
+    {
+        currentFadeStatus = FadeStatus.fading_out;
+        _oldCamera = oldCamera;
+        _newCamera = newCamera;
     }
 
     void Update()
@@ -83,7 +97,18 @@ public class SceneChanger : MonoBehaviour
 
                 if (currentFadeStatus == FadeStatus.fading_out)
                 {
-                    SceneManager.LoadScene(sceneToLoad);
+                    if (bChangeScene)
+                    {
+                        SceneManager.LoadScene(sceneToLoad);
+                        currentFadeStatus = FadeStatus.none;
+                    }
+                    else
+                    {
+                        currentFadeStatus = FadeStatus.fading_out;
+                        _oldCamera.gameObject.SetActive(false);
+                        _newCamera.gameObject.SetActive(true);
+                        OnTransitionMidway.Invoke();
+                    }
                     foreach (ImageInformation image in images)
                     {
                         image.image.color = image.color;
@@ -95,6 +120,7 @@ public class SceneChanger : MonoBehaviour
                     {
                         image.image.color = Color.clear;
                     }
+                    currentFadeStatus = FadeStatus.none;
                 }
 
                 currentFadeStatus = FadeStatus.none;

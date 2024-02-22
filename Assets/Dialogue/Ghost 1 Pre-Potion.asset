@@ -48,8 +48,8 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "Nice.\r\nNow I\u2019m seeing ghosts.\r\nCould this hangover get
-      any worse?\r\nNext thing you know they\u2019re gonna ask me for help or something.\r"
+    dialogueText: "It\u2019s ok, it\u2019s ok.\r\nI *hiccup* I jinxed myself.\r\nHappens
+      all the time after a long night.\r\nHave you ever been so drunk hehe?\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -61,9 +61,7 @@ MonoBehaviour:
     portraitOnLeft: 0
   - speakerName: Dr. Charon
     dialogueText: "I owe you the pleasure of being scared this early in the morning,
-      Eleonora.\r\nAnd what can I do for you?\r\nAlthough, there might be a veeeeeery
-      small issue:\r\nYou see\u2026 I\u2019m alive.\r\nAnd you are\u2026you get the
-      point.\r"
+      Eleonora.\r\nAnd what can I do for you?\r\nWanna be drinking buddies haha?\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -74,8 +72,9 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "Alrighty.\r\nLet\u2019s s\u2019pose I\u2019m this famous character
-      who can do all this.\r\nWhy would I help ye?\r"
+    dialogueText: "Ooooo. Yesss!\r\nExcuse my manners.\r\n*clears her throat and
+      rubs the dust of her clothes*\r\nPlease do tell me, dear Eleonora:\r\nHow may
+      I be of service?\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -88,36 +87,33 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "Great.\r\nNow she\u2019s crying.\r\nThe funny part about crying
-      ghosts is their tears aren\u2019t even wet.\r\nYou\u2019re all a bunch of crying
-      losers asking for my help.\r"
+    dialogueText: "I\u2019m so terribly sorry, my dear sweet Eleonora.\r\n*searches
+      for something in her pocket*\r\nNapkin?\r\nShoot!\r\nNevermind.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Eleonora
-    dialogueText: "Why, Dr. Charon?\r\nWhy are you so mean to me?\r\nWhat did I do
-      to you?\r"
+    dialogueText: "It\u2019s all right, Dr. Charon.\r\nIt\u2019s *slowly stops from
+      sobbing* it\u2019s all right.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "Let\u2019s start from the top.\r\nYou break into my garden.\r\nYou
-      scare the crap out of me.\r\nAnd then you ask for my help?\r\nDid I miss something?
-      No? Good."
+    dialogueText: "Now, I know you need my help.\r\nBut you should know it comes
+      at a cost.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Eleonora
-    dialogueText: "They all told me you\u2019ll be rude.\r\nThat you\u2019re trying
-      to get rid of us.\r\nThat the price to go into the afterlife is too much to
-      bear.\r"
+    dialogueText: "I\u2026 I know.\r\nThe other ghosts\u2026\r\nThey\u2019ve told
+      me about it.\r\nThat the price to go into the afterlife is too much to bear.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "OF COURSE IT IS, YOU SPINELESS COWARD!\r\nYou\u2026 you can\u2019t
-      afford this price.\r\nYou can\u2019t pay.\r\nNo. I don\u2019t want you to.\r\nI
-      won\u2019t allow you to.\r"
+    dialogueText: "I\u2019m afraid it\u2019s true, sweet Eleonora.\r\nIt\u2019s no
+      small price. No small price at all.\r\nYou\u2026 you can\u2019t afford it.\r\nYou
+      can\u2019t pay. I\u2019m sorry.\r\nI\u2019m so so sorry.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -186,10 +182,10 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Dr. Charon
-    dialogueText: "That\u2019s the problem, Eleonora.\r\nThat\u2019s why I can\u2019t
-      help you.\r\nBecause you\u2019d have to pay a price.\r\nAnd the price is your
-      memories about the most precious thing for you.\r\nYou\u2019ll lose everything
-      you knew about them.\r"
+    dialogueText: "That\u2019s the problem, my fairhearted Eleonora.\r\nThat\u2019s
+      why I can\u2019t help you.\r\nBecause you\u2019d have to pay a price.\r\nAnd
+      the price is your memories about the most precious thing for you.\r\nYou\u2019ll
+      lose everything you knew about them.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -213,8 +209,8 @@ MonoBehaviour:
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
   - speakerName: Eleonora
-    dialogueText: "That\u2019s why you were so rude?\r\nThat\u2019s why you wanted
-      to drive me away?\r"
+    dialogueText: "That\u2019s why you said you couldn\u2019t help me?\r\nThat\u2019s
+      why you went silent?\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -252,7 +248,7 @@ MonoBehaviour:
     portraitOnLeft: 0
   - speakerName: Dr. Charon
     dialogueText: "Do you have anything left from them?\r\nThe potion I\u2019m about
-      to brew needs one.\r"
+      to brew needs something connected to this memory.\r"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0

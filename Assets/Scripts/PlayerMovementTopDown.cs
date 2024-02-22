@@ -104,7 +104,14 @@ public class PlayerTopDownController : MonoBehaviour
         if (collision.tag == "Teleporter")
         {
             currentTriggerCollision = collision.GetComponent<TeleportTriggerVolumeComponent>();
-            Debug.Log("Teleporter trigger found.");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Teleporter")
+        {
+            currentTriggerCollision = null;
         }
     }
 

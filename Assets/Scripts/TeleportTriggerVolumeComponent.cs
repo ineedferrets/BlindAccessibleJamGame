@@ -6,13 +6,6 @@ public class TeleportTriggerVolumeComponent : MonoBehaviour
 {
     public Vector2 toTeleportTo {  get; private set; }
     public Camera toChangeCameraTo;
-    public GameObject visualOnEnterTrigger;
-
-    private void Start()
-    {
-        if (visualOnEnterTrigger != null)
-            visualOnEnterTrigger.SetActive(false);
-    }
 
     private void OnDrawGizmosSelected()
     {
@@ -27,24 +20,6 @@ public class TeleportTriggerVolumeComponent : MonoBehaviour
         if (childTransform != null)
         {
             toTeleportTo = childTransform.position;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerTopDownController controller = collision.GetComponent<PlayerTopDownController>();
-        if (controller && visualOnEnterTrigger)
-        {
-            visualOnEnterTrigger.gameObject.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        PlayerTopDownController controller = collision.GetComponent<PlayerTopDownController>();
-        if (controller && visualOnEnterTrigger)
-        {
-            visualOnEnterTrigger.gameObject.SetActive(false);
         }
     }
 }

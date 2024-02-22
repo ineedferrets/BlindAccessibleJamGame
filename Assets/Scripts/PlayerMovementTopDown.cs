@@ -110,6 +110,7 @@ public class PlayerTopDownController : MonoBehaviour
 
     private void TeleportPlayer()
     {
+        Debug.Log("Teleporting.");
         gameObject.transform.position = currentTriggerCollision.toTeleportTo;
 
         Camera.main.gameObject.SetActive(false);

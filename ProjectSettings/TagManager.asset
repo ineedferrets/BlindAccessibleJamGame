@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TextRender
+    uniqueID: 2512308255
+    locked: 0

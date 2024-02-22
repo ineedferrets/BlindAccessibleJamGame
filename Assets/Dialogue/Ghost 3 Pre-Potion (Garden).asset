@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
+  m_Name: Ghost 3 Pre-Potion (Garden)
+  m_EditorClassIdentifier: 
+  dialogue:
+  - speakerName: Hades
+    dialogueText: "*appearing out of nowhere*\r\nHa!\r\nYou son of a gun.\r\nYou
+      did it.\r\nYou bloody did it.\r\nKnew I could count on you.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "At least someone has a dependable person.\r\nUnlike your brother.\r\nImagine
+      you forgot to buy him a birthday pres-\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "*fuming* Won\u2019t you shut your trap for once?\r\nLaughing at
+      this!\r\nMocking at that!\r\nI told you it was an accident!\r\nI even got him
+      a nice bottle for his lightning.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: Lame.
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "*still fuming* What did I do to you, Charon?\r\nWhat?\r\nWhy are
+      you such a prick?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Hmm.\r\nWhere do I start?\r\nYou promised to revive my murdered
+      family 1000 years ago. Which you didn\u2019t.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Instead, you\u2019ve given me this curse of sending ghosts to
+      the afterlife through alchemical practices.\r\nGiven me immortality.\r\nEssentially
+      making me your slave for life.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "And you\u2019ve told me you\u2019ll keep your word about reuniting
+      me with my family.\r\nAfter I collect 666 of these memories.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "And you\u2019ve done a brilliant job.\r\nBetter than all the other
+      idi-... ahem, partners I\u2019ve had.\r\nIf I had a hat, I\u2019d take it off
+      and bow.\r\nIf I had any sense of respect, too, hahaha.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Besides, who would be so nuts to make a deal with the King of
+      Hell?\r\nOoo! That\u2019s right!\r\nA desperate little prick like you.\r\nBahahaha!\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "You done with the theatricals?\r\nLet\u2019s focus on the matter
+      at hand.\r\nThis was the 665th soul, Hades.\r\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "The 665th.\r\nOne more.\r\nAnd then\u2026 *getting angry*\r\nThen\u2026
+      you\u2019d better deliver.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: 'Hades '
+    dialogueText: "Or else? You\u2019ll kill me?\r\r\nYou\u2019re my plaything, Charon.
+      A dog on a leash.\r\nI say jump, you jump.\r\nI say bark, you bark.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "ow be a good girl and finish what you\u2019ve started.\r\nYour
+      final task is waiting in the garden.\r\nMwahaha!\r\n*vanishes into thin air*\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "He\u2019s right.\r\nI was a fool to make a deal with him.\r\nI
+      should\u2019ve died with all the others.\r\nWait for me\u2026 mother\u2026
+      father.. Edward.. little Henry.\r\nWe WILL be together again.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0

@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
+  m_Name: Ghost 2 Pre-Potion (Garden)
+  m_EditorClassIdentifier: 
+  dialogue:
+  - speakerName: ????
+    dialogueText: "Well well, Charon.\r\nYou did grow into a softie after all.\r\nHahaha.\r\nYou
+      should\u2019ve heard yourself.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: ????
+    dialogueText: "Nya nya nya, no small price.\r\nNya nya nya, you can\u2019t afford
+      it.\r\nNya nya nya, I\u2019m just the messenger.\r\n*laughs hysterically* Bahahaha!\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "What do you want, Hades?\r\nAre you here to mock me? Got nothing
+      better to do?\r\nGuess I\u2019m driving some of Hell\u2019s business away,
+      am I not?\r\nLook at you. The bloody king of hell.\r\nConversing with a mere
+      mort-\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Ye better watch yer tongue, Charon.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Ye better watch yer tongue, Charon.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "Or else?\r\nYou\u2019ll kill me?\r\n*laughs sarcastically*\r\nHades,
+      Hades, Hades.\r\nYou know killing me won\u2019t do you any good.\r\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "Or else?\r\nYou\u2019ll kill me?\r\n*laughs sarcastically*\r\nHades,
+      Hades, Hades.\r\nYou know killing me won\u2019t do you any good.\r\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "And you\u2019ll be stuck with me as a chit-chat buddy in the afterlife.\r\nHope
+      you got great booze in hell.\r\nAnd some spare ears for when that happens.\r\nBecause
+      I\u2019ll talk the hell out of them, hahaha.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "And you\u2019ll be stuck with me as a chit-chat buddy in the afterlife.\r\nHope
+      you got great booze in hell.\r\nAnd some spare ears for when that happens.\r\nBecause
+      I\u2019ll talk the hell out of them, hahaha.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Always the jester.\r\nAlways funny.\r\nAlways mocking others to
+      hide your own suffering.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "I missed this sweet pain you\u2019re hiding deep in your soul.\r\nAfter
+      all, you\u2019ve brought it onto yourself.\r\nThat night when you begged me
+      to bring him-\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "Anywhooo.\r\nI know you got business with me.\r\nWhat\u2019s it
+      gonna be this time?\r\nA soldier who wants to be reunited with his wife?\r\nA
+      kid who wants to see their beloved lost parents?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "Did your brother make a fool out of you again?\r\nHe does shoot
+      lightning and all that, after all.\r\nAnd you\u2019re just a\u2026\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "*getting angry* Spare me YOUR sympathies, Charon!\r\nAnd don\u2019t
+      you dare bring my brother into this.\r\nWe\u2019ve\u2026 we\u2019ve got our
+      own family matters.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: 'The mighty King of Hell, ladies and gents.
+
+      Reduced to silence
+      because daddy loved his brother more.
+
+      Alrighty, Hades my friend.
+
+'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "I\u2019m not your friend, buddy."
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "I\u2019m not your buddy, pal."
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Are you done?\r\nI have a tricky job for you this time.\r\nSo
+      tricky that you\u2019re the only one who can do it.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Did Cerberus shit on your boots again?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Yes.\r\nI mean no!\r\nPay attention for one damned second.\r\nThe
+      soldier thing you mentioned?\r\nIt\u2019s something like that.\r\nBut-\r\n"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: But what?
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "He won\u2019t talk to you."
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "He needs my help.\r\nHe \u201Casked\u201D you for my help.\r\nBut
+      he won\u2019t talk to me?\r\nBollocks!\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "You don\u2019t understand.\r\nHe won\u2019t talk to you because-\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: Because of what, Hades?
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Because he\u2019s mute, you imbecile!\r\nHis vocal cords got damaged
+      when he died.\r\nWait for people to finish their sentences.\r\nSheesh.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "*lightbulb moment* Ahaaaa!\r\nThat makes sense.\r\nCan\u2019t
+      you interpret for me?\r\nYou can read dead people\u2019s minds after all.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "I\u2019m afraid I have other pressing matters to\u2026 attend."
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "It\u2019s Zeus\u2019s birthday and you forgot to get him a present,
+      didn\u2019t you?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "*fuming* It was an accident!\r\nI didn\u2019t forg-\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Hades
+    dialogueText: "Anyways.\r\nYou\u2019ll find Mr. Soldier in the usual spot in
+      the graveyard.\r\nNow, I gotta go.\r\nLater hater!\r\n*disappears into thin
+      air*"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "He always drops the bomb and leaves.\r\nLike a dad telling his
+      kids that he\u2019s going after milk.\r\nGuess I\u2019d better see what this
+      is about.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0

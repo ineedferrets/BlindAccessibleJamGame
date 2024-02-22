@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
+  m_Name: Ghost 2 Pre-Potion (Graveyard)
+  m_EditorClassIdentifier: 
+  dialogue:
+  - speakerName: Dr Charon
+    dialogueText: "Heyo, soldier boy.\r\nWhat\u2019s up?\r\n"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts annoyed*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "Yeah, right.\r\nYou can\u2019t speak and all that.\r\nLet\u2019s
+      make this one simple.\r\nI\u2019ll ask you a couple of questions.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "One grunt for \u201CYes\u201D.\r\nTwo grunts for \u201CNo\u201D.\r\nWorks
+      for you?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Brilliant.\r\nSo, you died during the war.\r\nI know that much
+      from Hades.\r\nAnd even if I didn\u2019t, your clothes would give it away.\r\nThe
+      80\u2019s? Iraq?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Uff.\r\nThose were some diabolical times.\r\nI\u2019m sorry you
+      had to go through all that hell.\r\nI hope I can help relieve some of that
+      pain.\r\nI really do.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr Charon
+    dialogueText: "ow, if you\u2019ll excuse my rudeness:\r\nWhat keeps you chained
+      to this world?\r\nGot any kids?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Yes.\r\nYou do seem pretty young for kids.\r\nMaybe you wanted
+      to see your parents one last time?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: Your lover?
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Now I see.\r\nDid you love her?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Wait. You didn\u2019t love her?\r\nWhy would you want to see her
+      again then?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice furiously*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: Did she cheat on you?
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice while nodding*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Did YOU cheat on her?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Soldier
+    dialogueText: '*grunts twice furiously*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Sheesh.\r\nTough crowd.\r\nWait a sec.\nWhat is this?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Narrator
+    dialogueText: "Dr Charon sees a pendant around the soldier's neck.\r\nIt is shaped
+      in the form of a heart.\r\nLooking at it closely, she reads out loud:\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Jonathan + Michael.\r\nOf course you didn\u2019t love her.\r\nYou
+      loved HIM.\r\nAre you\u2026 are you Jonathan?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: '*grunts once while sobbing*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "I\u2019m\u2026 I\u2019m sorry, Jonathan.\r\nYou seem like a really
+      nice fellow.\r\nI\u2019m sure he loved you as much as you did.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: "*grunts once with an attempt of a smile, while tears fall onto
+      his cheeks*\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Did Hades tell you how this works out, Jonathan?\r\nThat you\u2019ll
+      have to leave your memory of Michael behind in order to go to the other side?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Are you fine with it?\r\nWon\u2019t you like to stay a while longer?\r\nKeep
+      Michael\u2019s memory alive?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: '*grunts twice*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "I guess it\u2019s even more painful, knowing you\u2019ll never
+      be reunited with him again, Jonathan."
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "What a brave soldier.\r\nGimme that pendant.\r\nAnd hold it right
+      here.\r\nI\u2019ll be right back.\r\n"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Jonathan
+    dialogueText: '*grunts*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0

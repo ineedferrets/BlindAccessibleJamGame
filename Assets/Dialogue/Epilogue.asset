@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
+  m_Name: Epilogue
+  m_EditorClassIdentifier: 
+  dialogue:
+  - speakerName: Dr. Charon
+    dialogueText: "Mom?\r\nDad?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Mom
+    dialogueText: "I\u2019m sorry, deary.\r\nWho are you?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Mom.\r\nIt\u2019s me!\r\nYour daughter!\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Mom
+    dialogueText: "I\u2019m sorry, deary.\r\nBut I have no daughter.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dad
+    dialogueText: "I think she went insane from the trip.\r\nBetter leave her be.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: "Edward?!\r\nEdward!\r\nWhat is happening?\r\nWhy don\u2019t they
+      recognize me?!\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Edward
+    dialogueText: "I\u2019m sorry, ma\u2019am.\r\nBut we don\u2019t know who you
+      are.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Henry
+    dialogueText: "Daddy?\r\nWho is she?\r\nWhy does she know?\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Edward
+    dialogueText: "I don\u2019t know, Henry.\r\nI think she\u2019s just lost.\r\nDon\u2019t
+      look at her.\r\nIt\u2019s not nice.\r"
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Dr. Charon
+    dialogueText: 'No!
+
+      No, no, no!
+
+      Not like this!
+
+      HADES,
+      YOU BASTARD!
+
+      NOOOO!!!'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+  - speakerName: Narrator
+    dialogueText: '*Charon falls onto her knees and starts crying, as her own family
+      is looking confusedly at her*'
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0

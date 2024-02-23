@@ -33,12 +33,15 @@ public class PauseMenuController : MonoBehaviour
         {
             TogglePauseMenu();
         }
-
     }
 
     public void TogglePauseMenu()
     {
-        Debug.Log("Toggling Pause Menu");
+        if (exitConfirmationMenu.gameObject && exitConfirmationMenu.gameObject.activeSelf)
+        {
+            ToggleConfirmationOfExit();
+        }
+
         bool bIsPauseMenuOpen = pauseMenuGroup.gameObject.activeSelf;
 
         foreach (CanvasGroup canvas in allCanvasGroups)
@@ -51,16 +54,16 @@ public class PauseMenuController : MonoBehaviour
 
     public void ToggleConfirmationOfExit()
     {
-        bool bIsMenuOpen = exitConfirmationMenu.gameObject.activeSelf;
+        bool bIsConfirmationMenuOpen = exitConfirmationMenu.gameObject.activeSelf;
 
-        pauseMenuGroup.interactable = bIsMenuOpen;
+        pauseMenuGroup.interactable = bIsConfirmationMenuOpen;
         foreach (CanvasGroup canvas in ignoreGroups)
         {
-            canvas.interactable = bIsMenuOpen;
+            canvas.interactable = bIsConfirmationMenuOpen;
         }
 
-        exitConfirmationMenu.gameObject.SetActive(!bIsMenuOpen);
-        exitConfirmationMenu.interactable = !bIsMenuOpen;
+        exitConfirmationMenu.gameObject.SetActive(!bIsConfirmationMenuOpen);
+        exitConfirmationMenu.interactable = !bIsConfirmationMenuOpen;
     }
 
     public void ExitToMenu()

@@ -10443,10 +10443,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 6001773703042754784, guid: 6d69afe49be16184ca61c1bc15ebd88b, type: 2}
-    - target: {fileID: 1294336574107889473, guid: de6bb556f95149c46b647244cb29f238, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2144781836858267634, guid: de6bb556f95149c46b647244cb29f238, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10547,10 +10543,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueGroup
       objectReference: {fileID: 0}
-    - target: {fileID: 5753937639570220099, guid: de6bb556f95149c46b647244cb29f238, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5908981580566751522, guid: de6bb556f95149c46b647244cb29f238, type: 3}
       propertyPath: m_fontSize
       value: 30
@@ -10586,14 +10578,6 @@ PrefabInstance:
     - target: {fileID: 5908981580566751522, guid: de6bb556f95149c46b647244cb29f238, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5908981580566751522, guid: de6bb556f95149c46b647244cb29f238, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8034867994372149682, guid: de6bb556f95149c46b647244cb29f238, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8751492414092877226, guid: de6bb556f95149c46b647244cb29f238, type: 3}
       propertyPath: m_Sprite

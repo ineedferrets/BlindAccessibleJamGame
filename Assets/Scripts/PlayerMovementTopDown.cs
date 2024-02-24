@@ -30,6 +30,7 @@ public class PlayerTopDownController : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+        SetControlScheme(ControlScheme.WorldControls);
 
         DialogueBoxController.OnDialogueStarted += EnterDialogueControls;
         DialogueBoxController.OnDialogueEnded += ExitDialogueControls;
@@ -75,26 +76,30 @@ public class PlayerTopDownController : MonoBehaviour
     }
 
     // PAUSE MENU CODE ----------------------------------------------
-    public void InputToggleMenuControls(InputAction.CallbackContext context)
+    public void PauseGame(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            ToggleMenuControls();
+            ToggleMenu();
         }
     }
     
-    public void ToggleMenuControls()
+    public void ToggleMenu()
     {
-        if (playerInput != null)
+        PauseMenuController pauseMenuController = PauseMenuController.Instance;
+
+        if (pauseMenuController == null || playerInput == null)
+            return;
+
+        if (playerInput.currentActionMap == playerInput.actions.FindActionMap("UI"))
         {
-            if (playerInput.currentActionMap == playerInput.actions.FindActionMap("UI"))
-            {
-                SetControlScheme(ControlScheme.WorldControls);
-            }
-            else
-            {
-                SetControlScheme(ControlScheme.MenuControls);
-            }
+            SetControlScheme(ControlScheme.WorldControls);
+            pauseMenuController.SetPauseMenu(false);
+        }
+        else
+        {
+            SetControlScheme(ControlScheme.MenuControls);
+            pauseMenuController.SetPauseMenu(true);
         }
     }
 

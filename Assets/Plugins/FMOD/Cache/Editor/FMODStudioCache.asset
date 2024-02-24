@@ -15,10 +15,65 @@ MonoBehaviour:
   Path: FMODProject/fmodproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638427352400652923
+  lastModified: 638444467839748823
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 1010
+  Exists: 1
+--- !u!114 &-7514085517760760303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC_background
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC_background
+  Guid:
+    Data1: 732265560
+    Data2: 1274943104
+    Data3: 773799090
+    Data4: -1282529468
+  Banks:
+  - {fileID: -3139575472330007706}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4627816812785319194}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 102982
+--- !u!114 &-4627816812785319194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MUSIC_background/music_track
+  m_EditorClassIdentifier: 
+  Name: music_track
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 84323288
+    data2: 883578890
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - alchemy_lab
+  - sentimental
+  - garden
   Exists: 1
 --- !u!114 &-3139575472330007706
 MonoBehaviour:
@@ -35,11 +90,38 @@ MonoBehaviour:
   Path: FMODProject/fmodproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638427352400642897
+  lastModified: 638444467839703276
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1232224
   Exists: 1
+--- !u!114 &-895995687502546152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFXVolumeTest
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFXVolumeTest
+  Guid:
+    Data1: 52891649
+    Data2: 1277321549
+    Data3: 1392852380
+    Data4: 2111952179
+  Banks:
+  - {fileID: -3139575472330007706}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,11 +137,13 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -7612618768494281008}
   - {fileID: -3139575472330007706}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -7514085517760760303}
+  - {fileID: -895995687502546152}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3139575472330007706}
   StringsBanks:
   - {fileID: -7612618768494281008}
-  cacheTime: 638427352400652923
+  cacheTime: 638444467839748823
   cacheVersion: 131609

@@ -1546,6 +1546,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 57fd6b73fe2572a4ca9156c78290f747, type: 3}
   m_PrefabInstance: {fileID: 338159897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &349976173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349976174}
+  - component: {fileID: 349976175}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &349976174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349976173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.770557, y: -1.6255995, z: 0.014402024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349976175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349976173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf71908b4e85e440b89a5b11ceac483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 732265560
+      Data2: 1274943104
+      Data3: 773799090
+      Data4: -1282529468
+    Path: event:/MUSIC_background
 --- !u!1 &350119134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,6 +2263,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1231525202}
   nameText: {fileID: 1005678399}
   dialogueBox: {fileID: 771268458}
+  musicManager: {fileID: 349976175}
 --- !u!114 &377626274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6376,7 +6428,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Outdoor
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 44557204}
 --- !u!4 &1156007922
@@ -10988,3 +11040,4 @@ SceneRoots:
   - {fileID: 1156007922}
   - {fileID: 5436782226370847917}
   - {fileID: 3594391567141129716}
+  - {fileID: 349976174}

@@ -15,8 +15,6 @@ public class InventoryManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
 
-    public Button returnButton;
-
     private void Awake()
     {
         if (InventoryManager.Instance == null)
@@ -49,6 +47,11 @@ public class InventoryManager : MonoBehaviour
 
     public bool InventoryContains(Item item) { return items.Contains(item); }
 
+    public void ToggleInventoryWithoutReturn()
+    {
+        ToggleInventory();
+    }
+
     public bool ToggleInventory()
     {
         if (inventoryUI == null) { return false;  }
@@ -70,12 +73,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(Item.gameObject);
         }
 
-        if (returnButton == null)
-        {
-            return;
-        }
-
-        Button prevButton = returnButton;
+        Button prevButton = null;
         Button secondPrevButton = null;
 
         foreach (Item item in items)
@@ -97,13 +95,7 @@ public class InventoryManager : MonoBehaviour
                 Navigation customNav = new Navigation();
                 customNav.mode = Navigation.Mode.Explicit;
                 customNav.selectOnUp = prevButton;
-                customNav.selectOnDown = returnButton;
                 newButton.navigation = customNav;
-
-                customNav.selectOnUp = newButton;
-                customNav.selectOnDown = returnButton.FindSelectableOnDown();
-                returnButton.navigation = customNav;
-
             }
 
             secondPrevButton = prevButton;
@@ -111,9 +103,13 @@ public class InventoryManager : MonoBehaviour
 
             var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var itemComponent = obj.GetComponent<InventoryItemComponent>();
+
+            Debug.Log(itemComponent);
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+            itemComponent.itemAsset = item;
         }
     }
 }

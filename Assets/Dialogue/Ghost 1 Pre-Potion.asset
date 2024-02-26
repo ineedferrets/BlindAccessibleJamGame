@@ -19,65 +19,87 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: ????
     dialogueText: "D-doctor? Doctor\u2026 Charon?"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Now I\u2019ve even begun to hear voices.\r\nWhat\u2019s next?\r\nA
       ghost sneaking behind my back to scare me?\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: ????
     dialogueText: "Booo!\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Yikes!\r\nIt was a joke! It was a joke!\r\nWait a second.\r\nWho\u2026
       who are you?\r\nHow\u2026 do you know me?\r\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: ????
     dialogueText: "I\u2019m sorry, Dr. Charon.\r\nI thought it was the only way I
       could catch your attention.\r\nI didn\u2019t mean to-\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "It\u2019s ok, it\u2019s ok.\r\nI *hiccup* I jinxed myself.\r\nHappens
       all the time after a long night.\r\nHave you ever been so drunk hehe?\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: ????
     dialogueText: "Umm\u2026\r\r\nIn fact\u2026 I need your help, Dr. Charon.\r\nMy
       name is Eleonora.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "I owe you the pleasure of being scared this early in the morning,
       Eleonora.\r\nAnd what can I do for you?\r\nWanna be drinking buddies haha?\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "Come on, Dr. Charon.\r\nYou\u2019re famous among all spirits.\r\nThey
       all talk about your ability to send us to the afterlife for good.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
-    dialogueText: "Ooooo.\r\nYesss!\r\nExcuse my manners.\r\n*clears her throat and
+    dialogueText: "Ooooo. Yesss!\r\nExcuse my manners.\r\n*clears her throat and
       rubs the dust of her clothes*\r\nPlease do tell me, dear Eleonora:\r\nHow may
       I be of service?\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I.. I have someone very important for me on the other side.\r\nThey
       are waiting for me.\r\nThey have been waiting for the past 10 years.\r\nBut
@@ -86,30 +108,40 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "I\u2019m so terribly sorry, my dear sweet Eleonora.\r\n*searches
       for something in her pocket*\r\nNapkin?\r\nShoot!\r\nNevermind.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "It\u2019s all right, Dr. Charon.\r\nIt\u2019s *slowly stops from
       sobbing* it\u2019s all right\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Now, I know you need my help.\r\nBut you should know it comes
       at a cost.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I\u2026 I know.\r\nThe other ghosts\u2026\r\nThey\u2019ve told
       me about it.\r\nThat the price to go into the afterlife is too much to bear.\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "\rI\u2019m afraid it\u2019s true, sweet Eleonora.\r\nIt\u2019s
       no small price.\r\nNo small price at all.\r\nYou\u2026 you can\u2019t afford
@@ -117,26 +149,36 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "What\u2019s the price?"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "*silent as a grave*\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "What\u2019s the price, Dr. Charon?"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: '*still silent*'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "WHAT\u2019S THE DAMN PRICE?\r\nMy two kids have been on the other
       side for 10 years.\r\nI could hear their screams that night.\r\nThe house was
@@ -144,6 +186,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: sentimental
   - speakerName: Eleonora
     dialogueText: "Oh, how sweet and innocent they looked.\r\nThe light shining in
       their sweet blue eyes.\r\nBut then\u2026 then\u2026\r\n*starts crying*\r\nThey
@@ -151,29 +195,39 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "The candles touched their clothes\u2026\r\nAnd\u2026\r\nAnd\u2026\r\nIt
       was all my fault.\r\nI\u2026 I just want to see them again. Please."
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "I understand your pain, Eleonora.\r\nI feel it as if it were my
       own-\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "YOU UNDERSTAND NOTHING!\r\nNOTHING!!!\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Let me ask you a question, Eleonora?\r\nIs the memory of your
       kids the most precious thing in your lif... I mean for you?\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "Of course it is!\r\nTheir blue eyes. Their shiny blonde hair.\r\nTheir
       warm\u2026 soft faces.\r\nThey were just 5 years old.\r\nAnd the Gods took
@@ -181,6 +235,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "That\u2019s the problem, my fairhearted Eleonora.\r\nThat\u2019s
       why I can\u2019t help you.\r\nBecause you\u2019d have to pay a price.\nYou\u2019ll
@@ -189,6 +245,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "You\u2019ll meet them.\r\nBut you won\u2019t know who they are.\r\nAnd
       they won\u2019t know who you are.\r\nThe process goes both ways.\r\nYou\u2019ll\u2026
@@ -196,24 +254,32 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "They\u2026 they won\u2019t know who I am?\r\nBy the gods, why?\r\nWhy
       wouldn\u2019t they?\r\nWhy wouldn\u2019t I recognize them?\r\nTheir own mother!\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "I\u2019m just the messenger, Eleonora.\r\nThe messenger..\r\nNot
       the master.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "That\u2019s why you said you couldn\u2019t help me?\r\nThat\u2019s
       why you went silent?\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Yes. I hate this power.\r\nThis\u2026 this curse.\r\nIts rules.
       Its very existence!\r\nI\u2026 I truly want to help you.\r\nBut I fear it will
@@ -221,6 +287,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I\u2026 I think I\u2019ve made my decision.\r\nI want you to help
       me get to the other side.\r\nWhat point in suffering here?\r\nKnowing they\u2019re
@@ -228,39 +296,53 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I\u2019m sure we\u2019ll learn to love each other again.\r\nI\u2019m
       sure.. I\u2019m sure\u2026 I\u2019m *starts crying*\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "I understand, Eleonora.\r\nI\u2019ll give you one last chance
       to leave.\r\nBut if you insist, I\u2019ll make your wish come true.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I\u2019m sure, Dr. Charon.\r\nPlease\u2026 help me\u2026\r\nHelp
       me see them again\u2026\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Do you have anything left from them?\r\nThe potion I\u2019m about
       to brew needs needs something connected to this memory.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: "I have these\u2026 these candles they were holding\u2026\r\nBefore\u2026
       before they\u2019ve turned to ash.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "It\u2019ll do.\r\nWait for me here, Eleonora.\r\nI\u2019ll come
       back.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: alchemy_lab

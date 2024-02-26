@@ -4159,7 +4159,8 @@ MonoBehaviour:
   - {fileID: 257099009}
   - {fileID: 1330077501}
   - {fileID: 2057918302}
-  recipes: []
+  recipes:
+  - {fileID: 0}
   textToReadOnLaunch: 
 --- !u!225 &601907493
 CanvasGroup:
@@ -4352,9 +4353,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apollos Blessing_ItemSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 180290910, guid: e23c28f379df4304f9eb6d0b00092083, type: 3}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6615871429215292252, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37098408
+      value: 0.368
       objectReference: {fileID: 0}
     - target: {fileID: 6615871429215292252, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4390,6 +4419,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615871429215292252, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953848835842787028, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: itemToSpawn
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+    - target: {fileID: 7953848835842787028, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: refreshPreview
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -13627,6 +13664,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: df8b1190-5b2c-4ab9-b4af-caa6380480c8
     m_ActionName: UI/TurnPageRight[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 664831ea-5da9-434d-86c9-94f38724743a
+    m_ActionName: UI/SpaceSubmit[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -13680,7 +13721,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.021299958, y: 0.015214086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13691,7 +13732,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5070542, y: 0.6896256}
   m_EdgeRadius: 0
 --- !u!50 &999651924
 Rigidbody2D:
@@ -28231,6 +28272,22 @@ PrefabInstance:
     - target: {fileID: 2688419476343372501, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
       propertyPath: m_Name
       value: ItemSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 180290910, guid: e23c28f379df4304f9eb6d0b00092083, type: 3}
+    - target: {fileID: 4960522604031137962, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6615871429215292252, guid: 9e112ed721674ff4bbfe6ff2ec69ca2e, type: 3}
       propertyPath: m_LocalPosition.x

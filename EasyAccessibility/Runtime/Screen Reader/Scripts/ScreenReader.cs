@@ -78,19 +78,19 @@ public class ScreenReader : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        Debug.Log("Loading Tolk...");
+        //Debug.Log("Loading Tolk...");
         Tolk.Load();
-        Debug.Log("Querying for the active screen reader driver...");
+        //Debug.Log("Querying for the active screen reader driver...");
         string name = Tolk.DetectScreenReader();
         if (name != null)
         {
-            Debug.Log("The active screen reader driver is: " + name);
+            //Debug.Log("The active screen reader driver is: " + name);
         }
         else
         {
-            Debug.Log("None of the supported screen readers is running");
+            //Debug.Log("None of the supported screen readers is running");
         }
-        Debug.Log("Tolk has finished");
+        //Debug.Log("Tolk has finished");
     }
 
     /// <summary>
@@ -155,7 +155,7 @@ public class ScreenReader : MonoBehaviour
     /// </summary>
     private void OnDestroy()
     {
-        Debug.Log("Unloading Tolk for scene change...");
+        //Debug.Log("Unloading Tolk for scene change...");
         Tolk.Unload();
     }
 
@@ -164,7 +164,7 @@ public class ScreenReader : MonoBehaviour
     /// </summary>
     void OnApplicationQuit()
     {
-        Debug.Log("Unloading Tolk...");
+        //Debug.Log("Unloading Tolk...");
         StaticReadText("Exiting game...");
         Tolk.Unload();
     }
@@ -342,10 +342,10 @@ public class ScreenReader : MonoBehaviour
     /// </summary>
     public static void StaticReadText(string outputText)
     {
-        Debug.Log("Trying to read " + outputText);
+        //Debug.Log("Trying to read " + outputText);
         if (!Tolk.Output(outputText))
         {
-            Debug.Log("Failed to output text");
+            //Debug.Log("Failed to output text");
         }
     }
 }

@@ -7,15 +7,20 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] Item itemToSpawn;
 
     GameObject spawnedItem = null;
+    SpriteRenderer previewRenderer;
 
     private void Start()
     {
         SpawnItem();
+        if (previewRenderer)
+        {
+            previewRenderer.sprite = null;
+        }
     }
 
     public bool SpawnItem()
     {
-        if (itemToSpawn && itemToSpawn.prefab && spawnedItem != null)
+        if (itemToSpawn && itemToSpawn.prefab && spawnedItem == null)
         {
             GameObject newObj = Instantiate(itemToSpawn.prefab);
             newObj.name = itemToSpawn.name;
@@ -27,9 +32,20 @@ public class ItemSpawner : MonoBehaviour
             SpriteRenderer spriteRenderer = newObj.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = itemToSpawn.icon;
 
+            spawnedItem = newObj;
+
             return newObj != null;
         }
 
         return false;
+    }
+
+    private void OnValidate()
+    {
+        previewRenderer = GetComponent<SpriteRenderer>();
+        if (itemToSpawn && previewRenderer)
+        {
+            previewRenderer.sprite = itemToSpawn.icon;
+        }
     }
 }

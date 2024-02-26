@@ -14,6 +14,7 @@ public class QuestAsset : ScriptableObject
     public List<Item> GivenItems;
     public List<Item> RequiredItems;
 
-    [Header("Progression")]
-    public QuestAsset NextQuest;
+    [Header("Ghost")]
+    public Sprite GhostSprite;
+
 }

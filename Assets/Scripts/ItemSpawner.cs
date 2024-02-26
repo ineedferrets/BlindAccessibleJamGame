@@ -18,6 +18,13 @@ public class ItemSpawner : MonoBehaviour
             GameObject newObj = Instantiate(item.prefab);
             newObj.name = item.name;
             newObj.transform.position = transform.position;
+
+            ItemComponent itemComponent = newObj.GetComponent<ItemComponent>();
+            itemComponent.itemAsset = item;
+
+            SpriteRenderer spriteRenderer = newObj.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = item.icon;
+
             return newObj != null;
         }
 

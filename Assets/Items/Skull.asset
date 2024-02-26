@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 1
   itemName: Skull
   icon: {fileID: 180290910, guid: e23c28f379df4304f9eb6d0b00092083, type: 3}
-  prefab: {fileID: 7288829655332832542, guid: 3cc3515c37b9238439b8472e2dcbdd87, type: 3}
+  prefab: {fileID: 6023582688598769468, guid: 6c455da9ac72aff40b57841fcec9d7f9, type: 3}

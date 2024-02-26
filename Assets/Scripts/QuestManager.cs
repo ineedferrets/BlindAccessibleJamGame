@@ -20,9 +20,13 @@ public class QuestManager : MonoBehaviour
     }
 
     [Header("Quests")]
-    public QuestAsset CurrentQuest;
-    public QuestAsset InitialQuest;
+    public List<QuestAsset> AllQuests;
     public bool bStartInitialQuestInDialogue;
+
+    [Header("Ghost")]
+    public SpriteRenderer spriteRendererForGhost;
+
+    private int currentQuestIdx = 0;
 
     enum QuestState
     {
@@ -39,9 +43,8 @@ public class QuestManager : MonoBehaviour
         {
             DialogueBoxController dialogueBoxController = DialogueBoxController.instance;
 
-            if (dialogueBoxController == null || InitialQuest == null) { return; }
+            if (dialogueBoxController == null || AllQuests.Count == 0) { return; }
 
-            CurrentQuest = InitialQuest;
             RunCurrentDialogue();
         }
     }
@@ -50,23 +53,26 @@ public class QuestManager : MonoBehaviour
     {
         DialogueBoxController dialogueBoxController = DialogueBoxController.instance;
 
-        if (dialogueBoxController == null) { return; }
+        if (dialogueBoxController == null || AllQuests.Count == 0) { return; }
 
         UpdateQuest();
 
-        DialogueAsset dialogueAsset = CurrentQuest.StartQuestDialogue;
+        QuestAsset currentQuest = AllQuests[currentQuestIdx];
+
+        DialogueAsset dialogueAsset = currentQuest.StartQuestDialogue;
         switch(_state)
         {
             case QuestState.NotStarted:
-                dialogueAsset = CurrentQuest.StartQuestDialogue;
-                StartQuest();
+                dialogueAsset = currentQuest.StartQuestDialogue;
+                DialogueBoxController.OnDialogueEnded += StartQuest;
                 break;
             case QuestState.Ongoing:
-                dialogueAsset = CurrentQuest.MidQuestDialogue;
+                dialogueAsset = currentQuest.MidQuestDialogue;
                 break;
             case QuestState.ReadyToHandIn:
-                dialogueAsset = CurrentQuest.EndQuestDialogue;
-                EndQuest();
+                dialogueAsset = currentQuest.EndQuestDialogue;
+                PreEndQuest();
+                DialogueBoxController.OnDialogueEnded += EndQuest;
                 break;
         }
 
@@ -75,10 +81,13 @@ public class QuestManager : MonoBehaviour
 
     private void StartQuest()
     {
+        DialogueBoxController.OnDialogueEnded -= StartQuest;
+
         InventoryManager inventoryManager = InventoryManager.Instance;
         if (inventoryManager == null) { return; }
 
-        foreach (Item item in CurrentQuest.GivenItems)
+        QuestAsset currentQuest = AllQuests[currentQuestIdx];
+        foreach (Item item in currentQuest.GivenItems)
         {
             inventoryManager.TryAndAdd(item);
         }
@@ -91,10 +100,11 @@ public class QuestManager : MonoBehaviour
         InventoryManager inventoryManager = InventoryManager.Instance;
         if (inventoryManager == null) { return; }
 
-        if (CurrentQuest.RequiredItems.Count == 0) { return; }
+        QuestAsset currentQuest = AllQuests[currentQuestIdx];
+        if (currentQuest.RequiredItems.Count == 0) { return; }
 
         bool bAllItemsGot = true;
-        foreach (Item item in CurrentQuest.RequiredItems)
+        foreach (Item item in currentQuest.RequiredItems)
         {
             bAllItemsGot = bAllItemsGot && inventoryManager.InventoryContains(item);
         }
@@ -105,8 +115,33 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    private void PreEndQuest()
+    {
+        InventoryManager inventoryManager = InventoryManager.Instance;
+        if (inventoryManager == null) { return; }
+
+        QuestAsset currentQuest = AllQuests[currentQuestIdx];
+        if (currentQuest.RequiredItems.Count == 0) { return; }
+
+        foreach (Item item in currentQuest.RequiredItems)
+        {
+            inventoryManager.Remove(item);
+        }
+    }
+
     private void EndQuest()
     {
+        DialogueBoxController.OnDialogueEnded -= EndQuest;
 
+        currentQuestIdx++;
+        if (currentQuestIdx == AllQuests.Count)
+        {
+            // Do things here to end the game.
+            return;
+        }
+
+        _state = QuestState.NotStarted;
+
+        spriteRendererForGhost.sprite = AllQuests[currentQuestIdx].GhostSprite;
     }
 }

@@ -19,6 +19,8 @@ public class DialogueBoxController : MonoBehaviour
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
 
+    public MusicManager musicManager = MusicManager.Instance;
+
   
     private void Awake()
     {
@@ -45,10 +47,17 @@ public class DialogueBoxController : MonoBehaviour
         skipLineTriggered = false;
         OnDialogueStarted?.Invoke();
 
-        for(int i = startPosition; i < dialogueAsset.dialogue.Length; i++)
+        for (int i = startPosition; i < dialogueAsset.dialogue.Length; i++)
         {
             DialogueSegment dialogueSegment = dialogueAsset.dialogue[i];
             nameText.text = dialogueSegment.speakerName;
+            //checks if this dialogue line needs to trigger new music
+            //if so, runs SetNewMusicTrack method in MusicManager
+            if (dialogueSegment.triggerNewMusic == true)
+            {
+                Debug.Log("new music is " + dialogueSegment.triggerMusicTrack);
+                musicManager.SetNewMusicTrack(dialogueSegment.triggerMusicTrack);
+            }
             StartCoroutine(TypeTextUncapped(dialogueSegment.dialogueText, dialogueSegment.dialogueSpeed));
             while (skipLineTriggered == false)
             {

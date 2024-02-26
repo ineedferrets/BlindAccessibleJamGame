@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMODProject/fmodproject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638444508732162822
+  lastModified: 638445866203550856
   FileSizes:
   - Name: Desktop
-    Value: 1158
+    Value: 1270
   Exists: 1
 --- !u!114 &-4578261191596472791
 MonoBehaviour:
@@ -62,10 +62,10 @@ MonoBehaviour:
   Path: FMODProject/fmodproject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638444508732116989
+  lastModified: 638445866203520943
   FileSizes:
   - Name: Desktop
-    Value: 1247936
+    Value: 1291808
   Exists: 1
 --- !u!114 &-895995687502546152
 MonoBehaviour:
@@ -114,12 +114,14 @@ MonoBehaviour:
   - {fileID: 4547226091130705471}
   - {fileID: 1445614618810202344}
   - {fileID: -4578261191596472791}
+  - {fileID: 2875110346589829301}
+  - {fileID: 2773034193365725785}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3139575472330007706}
   StringsBanks:
   - {fileID: -7612618768494281008}
-  cacheTime: 638444508732162822
+  cacheTime: 638445866203550856
   cacheVersion: 131609
 --- !u!114 &1445614618810202344
 MonoBehaviour:
@@ -175,6 +177,60 @@ MonoBehaviour:
   - sentimental
   - garden
   Exists: 1
+--- !u!114 &2773034193365725785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_pickup_item
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_pickup_item
+  Guid:
+    Data1: 619445396
+    Data2: 1097491860
+    Data3: -184301939
+    Data4: -1256000627
+  Banks:
+  - {fileID: -3139575472330007706}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 605
+--- !u!114 &2875110346589829301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX_potion_complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/SFX_potion_complete
+  Guid:
+    Data1: 1390597216
+    Data2: 1187187846
+    Data3: -888517200
+    Data4: -1374279597
+  Banks:
+  - {fileID: -3139575472330007706}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2695
 --- !u!114 &4547226091130705471
 MonoBehaviour:
   m_ObjectHideFlags: 0

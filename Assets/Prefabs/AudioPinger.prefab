@@ -47,11 +47,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -842250448
+      Data2: 1083199156
+      Data3: 312524177
+      Data4: 848661202
+    Path: event:/SFX/SFX_door_ping_lab
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -61,5 +61,5 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 3

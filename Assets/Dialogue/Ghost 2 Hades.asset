@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
-  m_Name: Ghost 2 Pre-Potion (Garden)
+  m_Name: Ghost 2 Hades
   m_EditorClassIdentifier: 
   dialogue:
   - speakerName: ????

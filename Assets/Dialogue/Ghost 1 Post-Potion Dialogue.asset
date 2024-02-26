@@ -38,14 +38,14 @@ MonoBehaviour:
   - speakerName: Narrator
     dialogueText: Eleonora drinks the concoction and leaves for the afterlife, leaving
       behind the memory of her children
-    dialogueSpeed: 15
+    dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
     triggerNewMusic: 0
     triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Rest in peace, Eleonora.\r\nRest in peace\u2026"
-    dialogueSpeed: 15
+    dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
     triggerNewMusic: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
     dialogueText: "YOU\u2019VE ACQUIRED THE MEMORY: THEIR SWEET BLUE EYES\u2026\r\nItem
       description: This memory contains the deep love of a mother for her two lost
       children.\r"
-    dialogueSpeed: 15
+    dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
     triggerNewMusic: 0

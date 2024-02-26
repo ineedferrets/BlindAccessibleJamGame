@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb21249159b4caf4c9d65cde16a8a342, type: 3}
+  m_Name: Ghost 1 Mid-Quest
+  m_EditorClassIdentifier: 
+  dialogue:
+  - speakerName: Eleanora
+    dialogueText: Have you got it yet?
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
+  - speakerName: Dr. Charon
+    dialogueText: It's coming! Just need to flip through my dusty old recipe book
+      and find the right ingredients...
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
+  - speakerName: Eleanora
+    dialogueText: Okay, I'll wait here.
+    dialogueSpeed: 40
+    characterPortrait: {fileID: 0}
+    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 

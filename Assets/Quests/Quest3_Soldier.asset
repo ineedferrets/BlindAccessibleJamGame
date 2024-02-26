@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300d04d7037a51649a01dd43b28b040b, type: 3}
+  m_Name: Quest3_Soldier
+  m_EditorClassIdentifier: 
+  StartQuestDialogue: {fileID: 11400000, guid: ef220825c21213e47ae6297fd61a8ba9, type: 2}
+  MidQuestDialogue: {fileID: 11400000, guid: 613abe3e24d9b7d4d91c3a01d91a4d42, type: 2}
+  EndQuestDialogue: {fileID: 11400000, guid: e35b16e73c027a641b2beb463e9a9610, type: 2}
+  GivenItems:
+  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  RequiredItems:
+  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  GhostSprite: {fileID: -843766659, guid: ff61b3e1852704b43837744395a92528, type: 3}

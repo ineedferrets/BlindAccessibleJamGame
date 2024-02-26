@@ -15,11 +15,13 @@ MonoBehaviour:
   dialogue:
   - speakerName: Narrator
     dialogueText: "Dr. Charon travels to the graveyard for one final time.\r\nThere\u2019s
-      no ghost in the usual place.\r\nEverything is silent.\r\nShe finds a note and
+      no ghost in the usual place. Everything is silent.\r\nShe finds a note and
       a mirror on the ground.\r\nShe picks up the note and reads:\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "\u201CLook into the mirror to find your final test\u201D\r\nHmm.\r\nMaybe
       it\u2019ll suck me into the underworld.\r\nMaybe it\u2019ll shatter in a thousand
@@ -27,24 +29,32 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Or even worse\u2026\r\nShow me Hades while he\u2019s bathing.\r\nYikes!\r\nI
       hope it\u2019s not the last one.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: "Charon looks into the mirror.\r\nIt doesn\u2019t suck her in.\r\nIt
       doesn\u2019t shatter to hurt her.\r\nNo sign of a horrid naked Hades.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "It\u2019s\u2026 me.\r\nIt\u2019s just\u2026 me.\r\nI\u2026 I don\u2019t
       get it.\r\nI don\u2019t understand."
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: 'The mirror falls from her hand.
 
@@ -57,30 +67,40 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "By the gods.\r\nWhat\u2019s happening to me?\r\nWhat did Hades
       do?\r\nI am\u2026 I am a ghost.\r\nI am\u2026 dead.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "*appears out of nowhere*\r\nExactly, dear Charon.\r\nTo be more
       precise.\r\nYou were never alive haha.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Impossible.\r\nI remember my parents.\r\nMy beloved Edward.\r\nMy
       sweet little Henry.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "And THAT\u2019S why you\u2019re stuck here, moron.\r\nEverything
       you think about is your family.\r\nEven after death.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "You thought you were alive.\r\nAnd you could do something about
       it.\r\nDo you know many eons I\u2019ve been waiting for a fool like you to
@@ -88,6 +108,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "You\u2019re a monster, Hades.\r\n*she throws herself at him*\r\nA
       heartless *hits him in the chest* Crazy *hits him again*\r\nBloody monster!\r\n*starts
@@ -95,49 +117,67 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "Why did you stop?\r\nKeep going!\r\nKeep going!\r\n*laughs maniacally\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "And now what?\r\nI thought\u2026 I thought we had a deal, you
       bastard!\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "By the gods.\r\nCould you stop mistaking me for a heartless prick?!\r\nI\u2019m
       only a heartless god.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: With a small prick?
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: Do you wanna see your folks again or not?
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Sorry *clears her tears*\r\nIt was too good of an opportunity.\r\nYes,
       I do.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: Then go to them by yourself.
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: '*confused* By myself?'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "Yesss!\r\nYou\u2019re a ghost, you imbecile!\r\nYou can send yourself
       to the afterlife.\r\nAnd because you\u2019re an alchemist, you\u2019ll keep
@@ -145,21 +185,29 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Guess he did keep his word after all.\r\nAll right.\r\nTime for
       one final potion\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Guess he did keep his word after all.\r\nAll right.\r\nTime for
       one final potion\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: "You\u2019ve acquired item: FAMILY PHOTO\r\nItem description: A
       depiction of Charon\u2019s beloved family.\r\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 

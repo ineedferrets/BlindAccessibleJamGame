@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -35,6 +36,12 @@ public class InteractableComponent : MonoBehaviour
         {
             controller.AddInteractable(this);
             pressToInteractVisual.SetActive(true);
+
+            TextMeshPro text = pressToInteractVisual.GetComponentInChildren<TextMeshPro>();
+            if (text)
+            {
+                ScreenReader.StaticReadText(text.text);
+            }
         }
     }
 

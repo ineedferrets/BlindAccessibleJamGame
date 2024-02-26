@@ -356,5 +356,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbf15b409f08c244900daa30f6cf34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   controls: Interact

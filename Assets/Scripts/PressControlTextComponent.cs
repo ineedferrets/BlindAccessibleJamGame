@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class PressControlTextComponent : MonoBehaviour
 {
-    [SerializeField] public GameObject player;
     [SerializeField] public string controls;
 
     private TextMeshPro textMesh;
@@ -15,11 +14,7 @@ public class PressControlTextComponent : MonoBehaviour
     private void Awake()
     {
         textMesh = GetComponent<TextMeshPro>();
-    }
-
-    private void Start()
-    {
-        textMesh = GetComponent<TextMeshPro>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerInput playerInput = player ? player.GetComponent<PlayerInput>() : null;
         if (!playerInput || !textMesh)
         {
@@ -33,7 +28,8 @@ public class PressControlTextComponent : MonoBehaviour
         }
 
         string controlBindingsStr = interactAction.GetBindingDisplayString(InputBinding.MaskByGroup(playerInput.currentControlScheme));
- 
+
         textMesh.text = textMesh.text.Replace("(controls)", controlBindingsStr);
     }
+
 }

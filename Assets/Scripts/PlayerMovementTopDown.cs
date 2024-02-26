@@ -26,8 +26,7 @@ public class PlayerTopDownController : MonoBehaviour
         DialogueControls
     }
 
-      // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         SetControlScheme(ControlScheme.WorldControls);

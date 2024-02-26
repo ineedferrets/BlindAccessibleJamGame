@@ -47,6 +47,8 @@ public class InventoryManager : MonoBehaviour
         items.Remove(item);
     }
 
+    public bool InventoryContains(Item item) { return items.Contains(item); }
+
     public bool ToggleInventory()
     {
         if (inventoryUI == null) { return false;  }

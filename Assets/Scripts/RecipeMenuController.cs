@@ -5,13 +5,24 @@ using UnityEngine.InputSystem;
 
 public class RecipeMenuController : MonoBehaviour
 {
+    [SerializeField] public CanvasGroup recipeMenuGroup;
     [SerializeField] public List<CanvasGroup> allPages = new List<CanvasGroup>();
     [SerializeField, TextArea] public string textToReadOnOpen;
 
     private int m_currentPage = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ToggleRecipeMenu(bool openMenu)
+    {
+        if (recipeMenuGroup == null) { return; }
+
+        recipeMenuGroup.gameObject.SetActive(openMenu);
+        if (openMenu)
+        {
+            SetupRecipe();
+        }
+    }
+
+    private void SetupRecipe()
     {
         string textToRead = textToReadOnOpen;
         for (int pageIdx = 0; pageIdx < allPages.Count; pageIdx++)
@@ -21,7 +32,7 @@ public class RecipeMenuController : MonoBehaviour
                 GameObject pageObj = allPages[pageIdx].gameObject;
                 pageObj.SetActive(true);
                 RecipePageComponent page = pageObj.GetComponent<RecipePageComponent>();
-                textToReadOnOpen += page.pageInformationToRead;
+                textToRead += " " + page.pageInformationToRead;
             }
             else
             {

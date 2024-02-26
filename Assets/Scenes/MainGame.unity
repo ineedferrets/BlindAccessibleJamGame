@@ -2984,7 +2984,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492675143}
-  - component: {fileID: 492675144}
   - component: {fileID: 492675145}
   m_Layer: 5
   m_Name: RecipeMenuGroup
@@ -2992,7 +2991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &492675143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3016,21 +3015,6 @@ RectTransform:
   m_AnchoredPosition: {x: -480, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &492675144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492675142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7352d931a5aff24cb256e6bfa8c0260, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allPages:
-  - {fileID: 1135561975}
-  textToReadOnOpen: Press E to turn the page left and Q to turn the page right.
 --- !u!225 &492675145
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7226,6 +7210,7 @@ GameObject:
   - component: {fileID: 704324437}
   - component: {fileID: 704324436}
   - component: {fileID: 704324441}
+  - component: {fileID: 704324442}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -7324,6 +7309,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1914030553}
+  - {fileID: 1071278185}
   - {fileID: 1590761622}
   - {fileID: 1904699278}
   - {fileID: 492675143}
@@ -7349,6 +7335,24 @@ MonoBehaviour:
   dialogueText: {fileID: 1590761624}
   nameText: {fileID: 1590761623}
   dialogueBox: {fileID: 1590761621}
+--- !u!114 &704324442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704324435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7352d931a5aff24cb256e6bfa8c0260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeMenuGroup: {fileID: 492675145}
+  allPages:
+  - {fileID: 1135561975}
+  - {fileID: 757564434}
+  - {fileID: 1750494833}
+  textToReadOnOpen: Press E to turn the page left and Q to turn the page right.
 --- !u!1 &744749507
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,7 +7410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Potion 1
+  m_text: Potion 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
@@ -12059,21 +12063,9 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704324436}
-        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-        m_MethodName: InputTogglePauseMenu
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 999651919}
         m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
-        m_MethodName: InputToggleMenuControls
+        m_MethodName: PauseGame
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12095,21 +12087,9 @@ MonoBehaviour:
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704324436}
-        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-        m_MethodName: InputTogglePauseMenu
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 999651919}
         m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
-        m_MethodName: InputToggleMenuControls
+        m_MethodName: PauseGame
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12141,14 +12121,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a9a2b798-abb2-48e4-86e5-3cb4562aa786
     m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 63650fdd-c696-4637-9a74-b67c903eb973
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8a0bb991-9fc9-443b-922c-565d59d4e5b2
-    m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 999651919}
@@ -12219,37 +12191,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 999651919}
-        m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
-        m_MethodName: InputToggleMenuControls
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
     m_ActionId: ab511700-7e41-4af9-8b17-d09bc414e09d
     m_ActionName: Player/Inventory[/Keyboard/q]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f4bd2994-3f3b-4a72-8155-a5fc7a299362
+    m_ActionName: UI/InventoryButton[/Keyboard/q]
+  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1700987583}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 999651919}
-        m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
-        m_MethodName: InputToggleMenuControls
+      - m_Target: {fileID: 704324442}
+        m_TargetAssemblyTypeName: RecipeMenuController, Assembly-CSharp
+        m_MethodName: OnPressPageLeft
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12259,8 +12211,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: f4bd2994-3f3b-4a72-8155-a5fc7a299362
-    m_ActionName: UI/InventoryButton[/Keyboard/q]
+    m_ActionId: 64225c66-dd3e-4c71-bca9-8801709526fb
+    m_ActionName: UI/TurnPageLeft[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 704324442}
+        m_TargetAssemblyTypeName: RecipeMenuController, Assembly-CSharp
+        m_MethodName: OnPressPageRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: df8b1190-5b2c-4ab9-b4af-caa6380480c8
+    m_ActionName: UI/TurnPageRight[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -14737,7 +14705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Potion 1
+  m_text: Potion 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
@@ -17831,6 +17799,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1658512007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1321293217818942507, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_Name
+      value: ScreenReader
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045005715398927378, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1321293217818942507, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1658512009}
+  m_SourcePrefab: {fileID: 100100000, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+--- !u!1 &1658512008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1321293217818942507, guid: a5a4094fa1f9b2f489e2f4459f27acca, type: 3}
+  m_PrefabInstance: {fileID: 1658512007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658512009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658512008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bcef3d3c24aeb439ffb8b5f23653f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readFromTextObject: 0
+  readOnHover: 0
+  outputText: 
 --- !u!1001 &1670123741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18628,7 +18676,7 @@ GameObject:
   - component: {fileID: 1750494832}
   - component: {fileID: 1750494831}
   m_Layer: 5
-  m_Name: Page1 (2)
+  m_Name: Page3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20665,19 +20713,24 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8202528104094836568, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202528104094836568, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 704324436}
     - target: {fileID: 8202528104094836568, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleConfirmationOfExit
+      value: SetConfirmationOfExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202528104094836568, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4271923014846903867, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1071278185}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7654745bdaa035b47922d09c9d137339, type: 3}
 --- !u!224 &1914030553 stripped
@@ -20696,15 +20749,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1914030553}
+    m_TransformParent: {fileID: 704324440}
     m_Modifications:
+    - target: {fileID: 63825588059439988, guid: 0d32064f8d602da4480953a990e67b18, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 63825588059439988, guid: 0d32064f8d602da4480953a990e67b18, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 704324436}
     - target: {fileID: 63825588059439988, guid: 0d32064f8d602da4480953a990e67b18, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleConfirmationOfExit
+      value: SetConfirmationOfExit
       objectReference: {fileID: 0}
     - target: {fileID: 2535761569682943727, guid: 0d32064f8d602da4480953a990e67b18, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -21009,7 +21066,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 704324442}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 999651919}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleRecipeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetToUIScheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RecipeMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerTopDownController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8402879210921197791, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Name
@@ -25011,3 +25124,4 @@ SceneRoots:
   - {fileID: 2016420922}
   - {fileID: 890878712}
   - {fileID: 575803886}
+  - {fileID: 1658512007}

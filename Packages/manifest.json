@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.trudeaua.easyaccessibility": "file:C:/Users/mmich/Downloads/EasyAccessibilityPackage-main/EasyAccessibilityPackage-main/com.trudeaua.easyaccessibility",
+    "com.trudeaua.easyaccessibility": "file:../EasyAccessibility",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.2d": "2.0.0",

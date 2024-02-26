@@ -31,7 +31,7 @@ public class InventoryManager : MonoBehaviour
 
     public bool TryAndAdd(Item item)
     {
-        if (items.Count == 3)
+        if (items.Contains(item))
         {
             return false;
         }

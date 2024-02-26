@@ -143,5 +143,15 @@ public class QuestManager : MonoBehaviour
         _state = QuestState.NotStarted;
 
         spriteRendererForGhost.sprite = AllQuests[currentQuestIdx].GhostSprite;
+
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("ItemSpawner");
+        foreach (GameObject obj in gameObjects)
+        {
+            ItemSpawner itemSpawner = obj.GetComponent<ItemSpawner>();
+            if (itemSpawner != null)
+            {
+                itemSpawner.SpawnItem();
+            }
+        }
     }
 }

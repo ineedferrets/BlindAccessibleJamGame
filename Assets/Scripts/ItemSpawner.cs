@@ -6,24 +6,26 @@ public class ItemSpawner : MonoBehaviour
 {
     [SerializeField] Item itemToSpawn;
 
+    GameObject spawnedItem = null;
+
     private void Start()
     {
-        SpawnItem(itemToSpawn);
+        SpawnItem();
     }
 
-    public bool SpawnItem(Item item)
+    public bool SpawnItem()
     {
-        if (item.prefab)
+        if (itemToSpawn && itemToSpawn.prefab && spawnedItem != null)
         {
-            GameObject newObj = Instantiate(item.prefab);
-            newObj.name = item.name;
+            GameObject newObj = Instantiate(itemToSpawn.prefab);
+            newObj.name = itemToSpawn.name;
             newObj.transform.position = transform.position;
 
             ItemComponent itemComponent = newObj.GetComponent<ItemComponent>();
-            itemComponent.itemAsset = item;
+            itemComponent.itemAsset = itemToSpawn;
 
             SpriteRenderer spriteRenderer = newObj.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = item.icon;
+            spriteRenderer.sprite = itemToSpawn.icon;
 
             return newObj != null;
         }

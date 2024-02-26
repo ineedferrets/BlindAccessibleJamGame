@@ -1,10 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ItemComponent : MonoBehaviour
 {
     [SerializeField] public Item itemAsset;
+
+    [SerializeField] public TextMeshPro itemPickUpText;
+
+    private void Awake()
+    {
+        if (itemPickUpText && itemAsset)
+        {
+            itemPickUpText.text = "Press (controls) to pick up " + itemAsset.name + ".";
+        }
+    }
 
     public void OnPickUp(bool bDestroyItem = true)
     {

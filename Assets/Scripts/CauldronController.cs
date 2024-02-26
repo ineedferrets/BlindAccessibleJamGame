@@ -68,8 +68,14 @@ public class CauldronController : MonoBehaviour
         Recipe successfulRecipe = null;
         foreach (Recipe recipe in recipes)
         {
-            bool bIngredientsMakeRecipe = ingredients.Count > 0;
-            foreach (Item item in ingredients)
+            bool bIngredientsMakeRecipe = ingredients.Count > 0 && ingredients.Count == recipe.ingredients.Count;
+            if (!bIngredientsMakeRecipe)
+            {
+                // What do we do if mismatch of ingredients?
+                return;
+            }
+
+            foreach (Item item in recipe.ingredients)
             {
                 bIngredientsMakeRecipe &= recipe.ingredients.Contains(item);
             }
@@ -82,6 +88,7 @@ public class CauldronController : MonoBehaviour
         if (!successfulRecipe)
         {
             // What do we do if it's unsuccessful?
+            return;
         }
 
         InventoryManager inventoryManager = InventoryManager.Instance;

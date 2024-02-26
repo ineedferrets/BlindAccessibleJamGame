@@ -56,6 +56,15 @@ public class PauseMenuController : MonoBehaviour
 
         pauseMenuGroup.gameObject.SetActive(bOpenMenu);
         pauseMenuGroup.interactable = bOpenMenu;
+
+        if (!bOpenMenu)
+        {
+            List<CanvasGroup> childCanvasGroups = new List<CanvasGroup>(GetComponentsInChildren<CanvasGroup>());
+            foreach (CanvasGroup child in childCanvasGroups)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void SetConfirmationOfExit(bool bOpenMenu)

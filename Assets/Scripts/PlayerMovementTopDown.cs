@@ -74,6 +74,11 @@ public class PlayerTopDownController : MonoBehaviour
         }
     }
 
+    public void SetToUIScheme()
+    {
+        playerInput.SwitchCurrentActionMap("UI");
+    }
+
     // PAUSE MENU CODE ----------------------------------------------
     public void PauseGame(InputAction.CallbackContext context)
     {

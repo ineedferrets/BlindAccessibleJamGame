@@ -1,0 +1,15 @@
+{
+    "name": "trudeaua.EasyAccessibility.EditorTests",
+    "references": [
+        "trudeaua.EasyAccessibility.Runtime",
+        "trudeaua.EasyAccessibility.Editor",
+        "Unity.InputSystem"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

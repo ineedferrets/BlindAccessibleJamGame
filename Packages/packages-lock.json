@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.trudeaua.easyaccessibility": {
-      "version": "file:C:/Users/mmich/Downloads/EasyAccessibilityPackage-main/EasyAccessibilityPackage-main/com.trudeaua.easyaccessibility",
+      "version": "file:../EasyAccessibility",
       "depth": 0,
       "source": "local",
       "dependencies": {

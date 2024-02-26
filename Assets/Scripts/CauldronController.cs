@@ -9,6 +9,8 @@ public class CauldronController : MonoBehaviour
     public static CauldronController instance;
 
     public List<Image> ingredientMenuImages = new List<Image>();
+    public List<Recipe> recipes = new List<Recipe>();
+    [TextArea] public string textToReadOnLaunch = "";
 
     private List<Item> ingredients = new List<Item>();
 
@@ -35,6 +37,8 @@ public class CauldronController : MonoBehaviour
     private void Start()
     {
         UpdateVisuals();
+
+        ScreenReader.StaticReadText(textToReadOnLaunch);
     }
 
     public bool TryAddIngredient(Item item, out AddIngredientOutcome outcome)
@@ -57,6 +61,36 @@ public class CauldronController : MonoBehaviour
 
         outcome = AddIngredientOutcome.Success;
         return true;
+    }
+
+    public void AttemptMix()
+    {
+        Recipe successfulRecipe = null;
+        foreach (Recipe recipe in recipes)
+        {
+            bool bIngredientsMakeRecipe = ingredients.Count > 0;
+            foreach (Item item in ingredients)
+            {
+                bIngredientsMakeRecipe &= recipe.ingredients.Contains(item);
+            }
+            if (bIngredientsMakeRecipe)
+            {
+                successfulRecipe = recipe;
+            }
+        }
+        
+        if (!successfulRecipe)
+        {
+            // What do we do if it's unsuccessful?
+        }
+
+        InventoryManager inventoryManager = InventoryManager.Instance;
+        foreach (Item item in ingredients)
+        {
+            inventoryManager.Remove(item);
+        }
+
+        inventoryManager.TryAndAdd(successfulRecipe.finalItem);
     }
 
     private void UpdateVisuals()

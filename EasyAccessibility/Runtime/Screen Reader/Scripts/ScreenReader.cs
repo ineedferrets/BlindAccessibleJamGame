@@ -74,18 +74,10 @@ public class ScreenReader : MonoBehaviour
     private EventSystem currentEventSystem;
 
     /// <summary>
-    /// A message detailing controls for the screen reader.
-    /// </summary>
-    private string controlsMessage;
-
-    /// <summary>
     /// Loads the <see cref="Tolk"/> library.
     /// </summary>
     void Awake()
     {
-        controlsMessage = "Press Tab key to focus on UI objects, Return to interact with buttons, and Right"
-            + "Control key to re-read the focused UI object";
-
         Debug.Log("Loading Tolk...");
         Tolk.Load();
         Debug.Log("Querying for the active screen reader driver...");
@@ -126,10 +118,9 @@ public class ScreenReader : MonoBehaviour
         }
 
         currentFocusedIndex = -1;
-
-        StaticReadText(sceneEnterMessage);
-
-        StaticReadText(controlsMessage);
+            
+        if (sceneEnterMessage != "")
+            StaticReadText(sceneEnterMessage);
     }
 
     /// <summary>

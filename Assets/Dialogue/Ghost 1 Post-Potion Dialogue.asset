@@ -18,33 +18,38 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Eleonora
     dialogueText: I am.
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Drink this.\nAnd may you find relief.\r\nThe relief of cleansing
       all your memories of them.\r\nBoth good\u2026\r\nAnd bad\u2026\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: sentimental
   - speakerName: Narrator
     dialogueText: Eleonora drinks the concoction and leaves for the afterlife, leaving
       behind the memory of her children
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Rest in peace, Eleonora.\r\nRest in peace\u2026"
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-  - speakerName: Dr. Charon
-    dialogueText: "Rest in peace, Eleonora.\r\nRest in peace\u2026"
-    dialogueSpeed: 15
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: "YOU\u2019VE ACQUIRED THE MEMORY: THEIR SWEET BLUE EYES\u2026\r\nItem
       description: This memory contains the deep love of a mother for her two lost
@@ -52,16 +57,5 @@ MonoBehaviour:
     dialogueSpeed: 15
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-  - speakerName: Narrator
-    dialogueText: "*Eleonora drinks the concoction and leaves for the afterlife,
-      leaving behind the memory of her children*\r"
-    dialogueSpeed: 15
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
-  - speakerName: Narrator
-    dialogueText: "YOU\u2019VE ACQUIRED THE MEMORY: THEIR SWEET BLUE EYES\u2026\r\nItem
-      description: This memory contains the deep love of a mother for her two lost
-      children.\r"
-    dialogueSpeed: 15
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 

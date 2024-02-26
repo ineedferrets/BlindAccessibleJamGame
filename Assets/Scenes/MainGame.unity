@@ -3299,6 +3299,23 @@ RectTransform:
   m_AnchoredPosition: {x: -480, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &492675144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492675142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7352d931a5aff24cb256e6bfa8c0260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPages:
+  - {fileID: 1135561975}
+  - {fileID: 757564434}
+  - {fileID: 1750494833}
+  textToReadOnOpen: Press E to turn the page left and Q to turn the page right.
 --- !u!225 &492675145
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7689,7 +7706,6 @@ MonoBehaviour:
   dialogueText: {fileID: 1590761624}
   nameText: {fileID: 1590761623}
   dialogueBox: {fileID: 1590761621}
---- !u!114 &704324442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7707,6 +7723,7 @@ MonoBehaviour:
   - {fileID: 757564434}
   - {fileID: 1750494833}
   textToReadOnOpen: Press E to turn the page left and Q to turn the page right.
+  musicManager: {fileID: 0}
 --- !u!1 &744749507
 GameObject:
   m_ObjectHideFlags: 0

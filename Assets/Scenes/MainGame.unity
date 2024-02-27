@@ -1942,7 +1942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllQuests:
-  - {fileID: 11400000, guid: 4ae2a3142099d3f48a7b61f1a2f22d46, type: 2}
   - {fileID: 11400000, guid: 33e10eb268db64943a6ca2ea72e9b941, type: 2}
   - {fileID: 11400000, guid: e9880646c28e4e048984c68fa31f7da7, type: 2}
   - {fileID: 11400000, guid: 2059d1b1671569640bc860f084bd7ad0, type: 2}

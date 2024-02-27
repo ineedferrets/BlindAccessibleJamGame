@@ -148,6 +148,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4699483381912612599, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6271852992651602772, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -157,8 +161,24 @@ PrefabInstance:
       value: InteractSquare
       objectReference: {fileID: 0}
     - target: {fileID: 6428311017161486047, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428311017161486047, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428311017161486047, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428311017161486047, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428311017161486047, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.368
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

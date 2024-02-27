@@ -47,6 +47,8 @@ public class QuestManager : MonoBehaviour
 
             RunCurrentDialogue();
         }
+
+        spriteRendererForGhost.sprite = AllQuests[0].GhostSprite;
     }
 
     public void RunCurrentDialogue()
@@ -87,6 +89,12 @@ public class QuestManager : MonoBehaviour
         if (inventoryManager == null) { return; }
 
         QuestAsset currentQuest = AllQuests[currentQuestIdx];
+        if (currentQuest.EndQuestDialogue == null)
+        {
+            currentQuestIdx++;
+            return;
+        }
+
         foreach (Item item in currentQuest.GivenItems)
         {
             inventoryManager.TryAndAdd(item);

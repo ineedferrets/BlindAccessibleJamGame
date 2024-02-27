@@ -16,5 +16,4 @@ public class QuestAsset : ScriptableObject
 
     [Header("Ghost")]
     public Sprite GhostSprite;
-
 }

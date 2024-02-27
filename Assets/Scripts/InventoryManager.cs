@@ -73,7 +73,7 @@ public class InventoryManager : MonoBehaviour
         if (!bUIIsActive)
             ListItems();
 
-        Selectable selectable = inventoryUI.gameObject.GetComponent<Selectable>();
+        Selectable selectable = inventoryUI.gameObject.GetComponentInChildren<Selectable>();
         if (selectable != null)
         {
             selectable.Select();

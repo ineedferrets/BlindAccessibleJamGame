@@ -91,7 +91,7 @@ public class QuestManager : MonoBehaviour
         QuestAsset currentQuest = AllQuests[currentQuestIdx];
         if (currentQuest.EndQuestDialogue == null)
         {
-            currentQuestIdx++;
+            EndQuest();
             return;
         }
 
@@ -101,6 +101,35 @@ public class QuestManager : MonoBehaviour
         }
 
         _state = QuestState.Ongoing;
+
+        // This is really really bad and needs to be entirely rethought after the jam is complete.
+        CauldronController cauldron = CauldronController.instance;
+        if (cauldron)
+        {
+            Recipe requiredRecipe = null;
+            foreach (Recipe recipe in cauldron.recipes)
+            {
+                if (currentQuest.RequiredItems.Contains(recipe.finalItem))
+                {
+                    requiredRecipe = recipe;
+                    break;
+                }
+            }
+            if (requiredRecipe == null) { return; }
+
+            List<GameObject> itemSpawners = new List<GameObject>(GameObject.FindGameObjectsWithTag("ItemSpawner"));
+            
+            foreach (GameObject spawnerObj in itemSpawners)
+            {
+                ItemSpawner itemSpawner = spawnerObj.GetComponent<ItemSpawner>();
+                if (!itemSpawner) continue;
+
+                if (requiredRecipe.ingredients.Contains(itemSpawner.itemToSpawn))
+                {
+                    itemSpawner.SpawnItem();
+                }
+            }
+        }
     }
 
     private void UpdateQuest()
@@ -144,22 +173,16 @@ public class QuestManager : MonoBehaviour
         currentQuestIdx++;
         if (currentQuestIdx == AllQuests.Count)
         {
-            // Do things here to end the game.
+            SceneChanger sceneChanger = SceneChanger.Instance;
+            if (sceneChanger)
+            {
+                sceneChanger.ChangeScene("Menu");
+            }
             return;
         }
 
         _state = QuestState.NotStarted;
 
         spriteRendererForGhost.sprite = AllQuests[currentQuestIdx].GhostSprite;
-
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("ItemSpawner");
-        foreach (GameObject obj in gameObjects)
-        {
-            ItemSpawner itemSpawner = obj.GetComponent<ItemSpawner>();
-            if (itemSpawner != null)
-            {
-                itemSpawner.SpawnItem();
-            }
-        }
     }
 }

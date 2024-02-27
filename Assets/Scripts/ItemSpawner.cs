@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [SerializeField] Item itemToSpawn;
+    [SerializeField] public Item itemToSpawn;
 
     GameObject spawnedItem = null;
     SpriteRenderer previewRenderer;
 
     private void Start()
     {
-        SpawnItem();
         if (previewRenderer)
         {
             previewRenderer.sprite = null;

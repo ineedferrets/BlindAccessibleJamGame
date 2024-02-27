@@ -1942,7 +1942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllQuests:
-  - {fileID: 11400000, guid: 4ae2a3142099d3f48a7b61f1a2f22d46, type: 2}
   - {fileID: 11400000, guid: 33e10eb268db64943a6ca2ea72e9b941, type: 2}
   - {fileID: 11400000, guid: e9880646c28e4e048984c68fa31f7da7, type: 2}
   - {fileID: 11400000, guid: 2059d1b1671569640bc860f084bd7ad0, type: 2}
@@ -5181,7 +5180,6 @@ GameObject:
   m_Component:
   - component: {fileID: 601907491}
   - component: {fileID: 601907493}
-  - component: {fileID: 601907492}
   m_Layer: 5
   m_Name: CauldronMenuGroup
   m_TagString: Untagged
@@ -5213,29 +5211,6 @@ RectTransform:
   m_AnchoredPosition: {x: 480, y: 300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &601907492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601907490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4279498a575fc84ea87a258dfd26435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredientMenuImages:
-  - {fileID: 257099009}
-  - {fileID: 1330077501}
-  - {fileID: 2057918302}
-  recipes:
-  - {fileID: 11400000, guid: 09fc9ac538179714ea7e5173446dc66b, type: 2}
-  - {fileID: 11400000, guid: 0bf34611ae440bf45a855abf067b13db, type: 2}
-  - {fileID: 11400000, guid: e438e2ce0846bd94b9c8a1fbc7786f01, type: 2}
-  textToReadOnLaunch: Navigate to item for cauldron by pressing W and S. Press Space
-    to add it to cauldron. Press Space again on the same item to remove it. Press
-    E to mix the cauldron. Press Escape to leave.
 --- !u!225 &601907493
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8896,6 +8871,7 @@ GameObject:
   - component: {fileID: 704324436}
   - component: {fileID: 704324441}
   - component: {fileID: 704324442}
+  - component: {fileID: 704324443}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -9041,6 +9017,35 @@ MonoBehaviour:
   - {fileID: 1750494833}
   textToReadOnOpen: Press Q to turn the page left and E to turn the page right. Press
     escape to leave.
+--- !u!114 &704324443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704324435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4279498a575fc84ea87a258dfd26435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cauldronCanvasGroup: {fileID: 601907493}
+  ingredientMenuImages:
+  - {fileID: 257099009}
+  - {fileID: 1330077501}
+  - {fileID: 2057918302}
+  recipes:
+  - {fileID: 11400000, guid: 09fc9ac538179714ea7e5173446dc66b, type: 2}
+  - {fileID: 11400000, guid: 0bf34611ae440bf45a855abf067b13db, type: 2}
+  - {fileID: 11400000, guid: e438e2ce0846bd94b9c8a1fbc7786f01, type: 2}
+  textToReadOnLaunch: Navigate to item for cauldron by pressing W and S. Press Space
+    to add it to cauldron. Press Space again on the same item to remove it. Press
+    E to mix the cauldron. Press Escape to leave.
+  textToReadOnItemAdded: (Ingredient) added to cauldron.
+  textToReadOnItemRemoved: (Ingredient) was removed from cauldron.
+  textToReadOnCauldronFull: (Ingredient) was not added as cauldron is full.
+  textToReadOnWrongRecipe: The (Ingredients) in cauldron do not match recipe.
+  textToReadOnRightRecipe: The (Ingredients) in the cauldron produce a (Result).
 --- !u!1001 &736657805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14295,6 +14300,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 999651919}
+        m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
+        m_MethodName: SetToUIScheme
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_ActionId: ab511700-7e41-4af9-8b17-d09bc414e09d
     m_ActionName: Player/Inventory[/Keyboard/q]
   - m_PersistentCalls:
@@ -14331,7 +14348,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 601907492}
+      - m_Target: {fileID: 704324443}
         m_TargetAssemblyTypeName: CauldronController, Assembly-CSharp
         m_MethodName: AttemptMix
         m_Mode: 0
@@ -24883,7 +24900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -24896,7 +24913,7 @@ PrefabInstance:
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 601907490}
+      objectReference: {fileID: 704324443}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -24919,7 +24936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: OpenMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -24931,7 +24948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: CauldronController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6622377664754408389, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_OnInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

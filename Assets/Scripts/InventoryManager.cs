@@ -25,13 +25,15 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this);
         }
-
-        DontDestroyOnLoad(this);
     }
 
     public bool TryAndAdd(Item item)
     {
         if (items.Contains(item))
+        {
+            return false;
+        }
+        if (items.Count == 3)
         {
             return false;
         }
@@ -73,7 +75,7 @@ public class InventoryManager : MonoBehaviour
         if (!bUIIsActive)
             ListItems();
 
-        Selectable selectable = inventoryUI.gameObject.GetComponent<Selectable>();
+        Selectable selectable = inventoryUI.gameObject.GetComponentInChildren<Selectable>();
         if (selectable != null)
         {
             selectable.Select();

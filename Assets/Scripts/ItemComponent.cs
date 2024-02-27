@@ -30,6 +30,13 @@ public class ItemComponent : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (bWasSuccessful)
+        {
+            QuestManager questManager = QuestManager.Instance;
+            if (questManager == null) { return; }
+            questManager.UpdateObjectivesInformation();
+        }
     }
 
     private void OnValidate()

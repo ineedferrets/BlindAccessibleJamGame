@@ -138,6 +138,10 @@ public class CauldronController : MonoBehaviour
 
         Debug.Log("Recipe successful");
         inventoryManager.TryAndAdd(successfulRecipe.finalItem);
+
+        QuestManager questManager = QuestManager.Instance;
+        if (questManager == null) { return; }
+        questManager.UpdateObjectivesInformation();
     }
 
     private void UpdateVisuals()

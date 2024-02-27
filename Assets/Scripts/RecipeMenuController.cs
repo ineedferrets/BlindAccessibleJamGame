@@ -20,6 +20,11 @@ public class RecipeMenuController : MonoBehaviour
         {
             SetupRecipe();
         }
+
+        QuestManager questManager = QuestManager.Instance;
+        if (questManager == null) { return; }
+
+        questManager.UpdateObjectivesInformation();
     }
 
     private void SetupRecipe()

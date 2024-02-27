@@ -4260,7 +4260,9 @@ MonoBehaviour:
   - {fileID: 1330077501}
   - {fileID: 2057918302}
   recipes:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 09fc9ac538179714ea7e5173446dc66b, type: 2}
+  - {fileID: 11400000, guid: 0bf34611ae440bf45a855abf067b13db, type: 2}
+  - {fileID: 11400000, guid: e438e2ce0846bd94b9c8a1fbc7786f01, type: 2}
   textToReadOnLaunch: 
 --- !u!225 &601907493
 CanvasGroup:

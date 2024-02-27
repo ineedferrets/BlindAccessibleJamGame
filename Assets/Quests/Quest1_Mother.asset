@@ -16,9 +16,9 @@ MonoBehaviour:
   MidQuestDialogue: {fileID: 11400000, guid: df65a75816c35e84b8a13e47e3c5dd4c, type: 2}
   EndQuestDialogue: {fileID: 11400000, guid: 8efb4526b11083846b56875b79edd17d, type: 2}
   GivenItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  - {fileID: 11400000, guid: 2c6c8182d2219084799f58a6a870c38d, type: 2}
   RequiredItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
-  - {fileID: 11400000, guid: a6fac36de921e384f846decb2b82146e, type: 2}
-  GhostSprite: {fileID: 21300000, guid: b4870862547b05b4c9b8b39a15544f8c, type: 3}
+  - {fileID: 11400000, guid: 2c6c8182d2219084799f58a6a870c38d, type: 2}
+  - {fileID: 11400000, guid: 9eab732430307bb47a151a21075cedd2, type: 2}
+  - {fileID: 11400000, guid: 7ab706f8b516f164981b20595499e15b, type: 2}
+  GhostSprite: {fileID: 21300000, guid: dcc7d0312de21854697df74412281850, type: 3}

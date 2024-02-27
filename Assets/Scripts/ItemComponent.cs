@@ -9,11 +9,11 @@ public class ItemComponent : MonoBehaviour
 
     [SerializeField] public TextMeshPro itemPickUpText;
 
-    private void Awake()
+    private void Start()
     {
         if (itemPickUpText && itemAsset)
         {
-            itemPickUpText.text = "Press (controls) to pick up " + itemAsset.name + ".";
+            itemPickUpText.text = itemPickUpText.text.Replace("pick up", "pick up " + itemAsset.name);
         }
     }
 

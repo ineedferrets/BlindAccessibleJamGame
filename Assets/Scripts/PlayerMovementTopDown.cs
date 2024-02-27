@@ -18,6 +18,7 @@ public class PlayerTopDownController : MonoBehaviour
     TeleportTriggerVolumeComponent currentTriggerCollision = null;
 
     List<InteractableComponent> interactables = new List<InteractableComponent>();
+    InteractableComponent closestInteractable = null;
 
     public enum ControlScheme
     {
@@ -45,6 +46,25 @@ public class PlayerTopDownController : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(xMovement * moveSpeed, yMovement * moveSpeed);
+
+        if (interactables.Count > 0)
+        {
+            float closestDist = float.MaxValue;
+            foreach (var interactable in interactables)
+            {
+                float interactDistance = Vector2.Distance(interactable.transform.position, transform.position);
+                if (closestDist > interactDistance)
+                {
+                    closestDist = interactDistance;
+                    closestInteractable = interactable;
+                }
+            }
+
+            foreach (var interactable in interactables)
+            {
+                interactable.ToggleVisuals(interactable == closestInteractable);
+            }
+        }
     }
 
     private void OnValidate()
@@ -63,9 +83,9 @@ public class PlayerTopDownController : MonoBehaviour
     {
         if (context.performed)
         {
-            if (interactables.Count > 0)
+            if (closestInteractable)
             {
-                interactables[0].Interact();
+                closestInteractable.Interact();
             }
             if (currentTriggerCollision)
             {
@@ -145,6 +165,9 @@ public class PlayerTopDownController : MonoBehaviour
     public void RemoveInteractable(InteractableComponent interactable)
     {
         interactables.Remove(interactable);
+        interactable.ToggleVisuals(false);
+        if (closestInteractable == interactable)
+            closestInteractable = null;
     }
 
     // DIALOGUE CODE ----------------------------------------------

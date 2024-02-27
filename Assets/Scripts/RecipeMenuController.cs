@@ -45,7 +45,7 @@ public class RecipeMenuController : MonoBehaviour
 
     public void OnPressPageLeft(InputAction.CallbackContext context)
     {
-        if (!context.performed || m_currentPage == 0) { return; }
+        if (!context.performed || m_currentPage == 0 || !recipeMenuGroup.gameObject.activeSelf) { return; }
 
         allPages[m_currentPage].gameObject.SetActive(false);
         m_currentPage--;
@@ -58,7 +58,7 @@ public class RecipeMenuController : MonoBehaviour
 
     public void OnPressPageRight(InputAction.CallbackContext context)
     {
-        if (!context.performed || m_currentPage == allPages.Count - 1) { return; }
+        if (!context.performed || m_currentPage == allPages.Count - 1 || !recipeMenuGroup.gameObject.activeSelf) { return; }
 
         allPages[m_currentPage].gameObject.SetActive(false);
         m_currentPage++;

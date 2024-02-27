@@ -15,8 +15,6 @@ MonoBehaviour:
   StartQuestDialogue: {fileID: 11400000, guid: 293852eab8230564ab53c65f7c64b3a2, type: 2}
   MidQuestDialogue: {fileID: 0}
   EndQuestDialogue: {fileID: 0}
-  GivenItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
-  RequiredItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  GivenItems: []
+  RequiredItems: []
   GhostSprite: {fileID: 0}

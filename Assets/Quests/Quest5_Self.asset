@@ -18,7 +18,5 @@ MonoBehaviour:
   GivenItems:
   - {fileID: 11400000, guid: 9e0d83d1642ba044289fb1fb396c3b1a, type: 2}
   RequiredItems:
-  - {fileID: 11400000, guid: 9e0d83d1642ba044289fb1fb396c3b1a, type: 2}
-  - {fileID: 11400000, guid: 4155534455bb09c45bdac447d50f1d6c, type: 2}
-  - {fileID: 11400000, guid: beb40f78346a2c248a96431b2c4d22a0, type: 2}
+  - {fileID: 11400000, guid: 9386d69318d98b24cb1a2eacde50bfbc, type: 2}
   GhostSprite: {fileID: 21300000, guid: b4870862547b05b4c9b8b39a15544f8c, type: 3}

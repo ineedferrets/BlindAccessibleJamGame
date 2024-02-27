@@ -25,13 +25,15 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this);
         }
-
-        DontDestroyOnLoad(this);
     }
 
     public bool TryAndAdd(Item item)
     {
         if (items.Contains(item))
+        {
+            return false;
+        }
+        if (items.Count == 3)
         {
             return false;
         }

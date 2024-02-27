@@ -209,7 +209,7 @@ public class QuestManager : MonoBehaviour
     {
         if (_state == QuestState.NotStarted)
         {
-            objectiveBodyText.text = "- Speak to the ghost in your alchemy lab.";
+            objectiveBodyText.text = "- Speak to the ghost in the cemetery.";
             currentObjective = ghostObject;
             return;
         }

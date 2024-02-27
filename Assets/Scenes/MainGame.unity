@@ -14524,18 +14524,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114830197}
-        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
-        m_MethodName: UpdateObjectivesInformation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: cb7de0d5-be1c-4f72-9073-822c57f5b45c
     m_ActionName: Outdoor/Interact[/Keyboard/e]
   - m_PersistentCalls:
@@ -14628,18 +14616,6 @@ MonoBehaviour:
     m_ActionName: UI/TurnPageLeft[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704324442}
-        m_TargetAssemblyTypeName: RecipeMenuController, Assembly-CSharp
-        m_MethodName: OnPressPageRight
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 704324443}
         m_TargetAssemblyTypeName: CauldronController, Assembly-CSharp
         m_MethodName: AttemptMix
@@ -14652,10 +14628,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114830197}
-        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
-        m_MethodName: UpdateObjectivesInformation
-        m_Mode: 1
+      - m_Target: {fileID: 704324442}
+        m_TargetAssemblyTypeName: RecipeMenuController, Assembly-CSharp
+        m_MethodName: OnPressPageRight
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

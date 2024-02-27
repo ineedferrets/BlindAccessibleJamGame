@@ -11,7 +11,7 @@ public class PressControlTextComponent : MonoBehaviour
 
     private TextMeshPro textMesh;
 
-    private void Awake()
+    private void Start()
     {
         textMesh = GetComponent<TextMeshPro>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");

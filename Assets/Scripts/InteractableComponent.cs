@@ -9,7 +9,7 @@ public class InteractableComponent : MonoBehaviour
 {
     [Header("Visuals")]
     [SerializeField]
-    GameObject pressToInteractVisual;
+    public GameObject pressToInteractVisual;
 
     private void Start()
     {
@@ -35,13 +35,6 @@ public class InteractableComponent : MonoBehaviour
         if (controller)
         {
             controller.AddInteractable(this);
-            pressToInteractVisual.SetActive(true);
-
-            TextMeshPro text = pressToInteractVisual.GetComponentInChildren<TextMeshPro>();
-            if (text)
-            {
-                ScreenReader.StaticReadText(text.text);
-            }
         }
     }
 
@@ -51,13 +44,31 @@ public class InteractableComponent : MonoBehaviour
         if (controller)
         {
             controller.RemoveInteractable(this);
-            pressToInteractVisual.SetActive(false);
         }
     }
 
     public void Interact()
     {
         m_OnInteraction.Invoke();
+    }
+
+    public void ToggleVisuals(bool toggle)
+    {
+        if (!pressToInteractVisual)
+            return;
+            
+        if (toggle && !pressToInteractVisual.activeSelf)
+        {
+            pressToInteractVisual.SetActive(toggle);
+            TextMeshPro textMeshProUGUI = pressToInteractVisual.GetComponent<TextMeshPro>();
+            string textToRead = textMeshProUGUI ? textMeshProUGUI.text : "";
+            if (textToRead != "")
+            {
+                ScreenReader.StaticReadText(textToRead);
+            }
+        }
+
+        pressToInteractVisual.SetActive(toggle);
     }
 
 }

@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartQuestDialogue: {fileID: 11400000, guid: 814882b54ba1c484fbc6f88ef39dfaf4, type: 2}
   MidQuestDialogue: {fileID: 0}
-  EndQuestDialogue: {fileID: 11400000, guid: d2e1f50e25fb97c49b5fbf27c524e986, type: 2}
-  GivenItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
-  RequiredItems:
-  - {fileID: 11400000, guid: 1b3b3f5dcdea6e34ca15571570567bce, type: 2}
+  EndQuestDialogue: {fileID: 0}
+  GivenItems: []
+  RequiredItems: []
   GhostSprite: {fileID: 0}

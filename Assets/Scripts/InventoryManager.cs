@@ -37,12 +37,22 @@ public class InventoryManager : MonoBehaviour
         }
 
         items.Add(item);
+
+        if (inventoryUI.gameObject.activeSelf)
+        {
+            ListItems();
+        }
+
         return true;
     }
 
     public void Remove(Item item)
     {
         items.Remove(item);
+        if (inventoryUI.gameObject.activeSelf)
+        {
+            ListItems();
+        }
     }
 
     public bool InventoryContains(Item item) { return items.Contains(item); }
@@ -62,6 +72,12 @@ public class InventoryManager : MonoBehaviour
 
         if (!bUIIsActive)
             ListItems();
+
+        Selectable selectable = inventoryUI.gameObject.GetComponent<Selectable>();
+        if (selectable != null)
+        {
+            selectable.Select();
+        }
 
         return !bUIIsActive;
     }
@@ -104,8 +120,6 @@ public class InventoryManager : MonoBehaviour
             var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
             var itemComponent = obj.GetComponent<InventoryItemComponent>();
-
-            Debug.Log(itemComponent);
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;

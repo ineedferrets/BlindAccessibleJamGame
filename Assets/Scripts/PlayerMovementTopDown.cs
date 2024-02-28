@@ -1,5 +1,7 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -9,11 +11,19 @@ public class PlayerTopDownController : MonoBehaviour
     public Rigidbody2D rb;
     [Header("Movement")]
     public float moveSpeed = 5f;
-
-    PlayerInput playerInput;
-    
     float xMovement;
     float yMovement;
+
+    [Header("Ping System")]
+    public FMODUnity.EventReference fmodPingObjectiveSFXEvent;
+    private FMOD.Studio.EventInstance objectivePingInstance;
+
+    [Header("World Cameras"), Tooltip("This needs to be improved to a system that doesn't rely on hard references.")]
+    public Camera cemeteryCamera;
+    public Camera gardenCamera;
+    public Camera homeCamera;
+
+    PlayerInput playerInput;
 
     TeleportTriggerVolumeComponent currentTriggerCollision = null;
 
@@ -34,6 +44,11 @@ public class PlayerTopDownController : MonoBehaviour
 
         DialogueBoxController.OnDialogueStarted += EnterDialogueControls;
         DialogueBoxController.OnDialogueEnded += ExitDialogueControls;
+    }
+
+    private void Start()
+    {
+        objectivePingInstance = FMODUnity.RuntimeManager.CreateInstance(fmodPingObjectiveSFXEvent);
     }
 
     private void OnDestroy()
@@ -167,6 +182,83 @@ public class PlayerTopDownController : MonoBehaviour
         interactable.ToggleVisuals(false);
         if (closestInteractable == interactable)
             closestInteractable = null;
+    }
+
+    // PING CODE ----------------------------------------------
+    public void ObjectivePing(InputAction.CallbackContext context)
+    {
+        if (!context.performed) { return; }
+
+        QuestManager questManager = QuestManager.Instance;
+        if (questManager == null) { return; }
+
+        GameObject objective = questManager.currentObjective;
+        if (objective == null) { return; }
+
+        // Find screen objective is on.
+        List<Camera> cameras = new List<Camera> { homeCamera, cemeteryCamera, gardenCamera };
+
+        Camera closestObjectiveCamera = null;
+        float closestObjectiveDist = float.MaxValue;
+        Camera activeCamera = null;
+        foreach (Camera camera in cameras)
+        {
+            float distanceToObjective = Vector2.Distance(camera.transform.position, objective.transform.position);
+            if (distanceToObjective < closestObjectiveDist)
+            {
+                closestObjectiveDist = distanceToObjective;
+                closestObjectiveCamera = camera;
+            }
+
+            if (camera.gameObject.activeSelf)
+            {
+                activeCamera = camera;
+            }
+        }
+
+        // If the objective is in the same area as the player, just set the ping to the objective.
+        if (closestObjectiveCamera == activeCamera)
+        {
+            PlayEmitterOnGameObject(objective, fmodPingObjectiveSFXEvent);
+            return;
+        }
+
+        // If the objective is in a different area as the player, we path find through hard code.
+        // This is extremely inelegant and lazy and since it's the end of the jam, I'm doing it
+        // this way. Sorry future me.
+
+        List<GameObject> teleporters = new List<GameObject>(GameObject.FindGameObjectsWithTag("Teleporter"));
+        string teleporterStringToFind = "";
+        // We can assume the player needs to go to the garden if in the cemetery or house.
+        if (activeCamera == cemeteryCamera || activeCamera == homeCamera)
+        {
+            teleporterStringToFind = activeCamera == cemeteryCamera ? "CemToGar" : "IndToGar";
+        }
+        // Otherwise we are in the garden, find which teleporter to go to. I hate myself for this code.
+        else
+        {
+            teleporterStringToFind = closestObjectiveCamera == cemeteryCamera ? "GarToCem" : "GarToInd";
+        }
+
+        GameObject teleporter = teleporters.Find((teleporter) => teleporter.name.Contains(teleporterStringToFind));
+        Debug.Log(teleporter);
+        PlayEmitterOnGameObject(teleporter, fmodPingObjectiveSFXEvent);
+        return;
+    }
+
+    private void PlayEmitterOnGameObject(GameObject emitter, EventReference eventReference)
+    {
+        StudioEventEmitter eventEmitter = emitter.GetComponent<StudioEventEmitter>();
+        if (eventEmitter != null)
+        {
+            eventEmitter.EventReference = eventReference;
+        }
+        else
+        {
+            eventEmitter = emitter.AddComponent<StudioEventEmitter>();
+            eventEmitter.EventReference = eventReference;
+        }
+        eventEmitter.Play();
     }
 
     // DIALOGUE CODE ----------------------------------------------

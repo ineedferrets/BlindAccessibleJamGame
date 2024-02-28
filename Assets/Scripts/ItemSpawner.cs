@@ -11,6 +11,7 @@ public class ItemSpawner : MonoBehaviour
 
     private void Start()
     {
+        previewRenderer = GetComponent<SpriteRenderer>();
         if (previewRenderer)
         {
             previewRenderer.sprite = null;

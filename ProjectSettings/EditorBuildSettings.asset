@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OldGame.unity
     guid: 47cf734c4de3293438f9176ac7cf6cfc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 7d1595e76eb698440b421242f9dd1cdd
   - enabled: 0
@@ -19,5 +19,5 @@ EditorBuildSettings:
     guid: 8607711a18804e84dbef2b19f218d600
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
-    guid: ce6d7d94107882b4f9a8ac8b9c04d4ae
+    guid: 38688bc671eb9ae4b8159996006a2068
   m_configObjects: {}

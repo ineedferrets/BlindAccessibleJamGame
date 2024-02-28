@@ -19,6 +19,7 @@ public class RecipeMenuController : MonoBehaviour
         if (openMenu)
         {
             SetupRecipe();
+            //ScreenReader.StaticReadText(textToReadOnOpen);
         }
 
         QuestManager questManager = QuestManager.Instance;
@@ -45,7 +46,7 @@ public class RecipeMenuController : MonoBehaviour
             }
         }
 
-        ScreenReader.StaticReadText(textToRead);
+        //ScreenReader.StaticReadText(textToRead);
     }
 
     public void OnPressPageLeft(InputAction.CallbackContext context)
@@ -58,7 +59,7 @@ public class RecipeMenuController : MonoBehaviour
         pageObj.SetActive(true);
         RecipePageComponent page = pageObj.GetComponent<RecipePageComponent>();
 
-        ScreenReader.StaticReadText(page.pageInformationToRead);
+        //ScreenReader.StaticReadText(page.pageInformationToRead);
     }
 
     public void OnPressPageRight(InputAction.CallbackContext context)
@@ -71,6 +72,6 @@ public class RecipeMenuController : MonoBehaviour
         pageObj.SetActive(true);
         RecipePageComponent page = pageObj.GetComponent<RecipePageComponent>();
 
-        ScreenReader.StaticReadText(page.pageInformationToRead);
+        //ScreenReader.StaticReadText(page.pageInformationToRead);
     }
 }

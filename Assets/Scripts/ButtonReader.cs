@@ -15,7 +15,7 @@ public class ButtonReader : Button
         Debug.Log(text);
         if (text)
         {
-            ScreenReader.StaticReadText(text.text);
+            //ScreenReader.StaticReadText(text.text);
         }
     }
 }

@@ -5,12 +5,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 
 public class DialogueBoxController : MonoBehaviour
 {
     public static DialogueBoxController instance {  get; private set; }
 
+    [Header("Dialogue UI Elements")]
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] CanvasGroup dialogueBox;
@@ -19,6 +21,15 @@ public class DialogueBoxController : MonoBehaviour
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
 
+    [Header("Fade To Black")]
+    [SerializeField] Image blackoutImage;
+    [SerializeField] float fadeDuration = 3f;
+    public static event Action OnBlackoutComplete;
+    private bool bFadeToBlack = false;
+    private float fadeTimer;
+    private Color m_blackoutImageOriginalColor;
+
+    [Header("Music")]
     public MusicManager musicManager = MusicManager.Instance;
 
   
@@ -100,6 +111,39 @@ public class DialogueBoxController : MonoBehaviour
         if (context.performed)
         {
             skipLineTriggered = true;
+        }
+    }
+
+    public void StartBlackoutFadeIn()
+    {
+        if (!blackoutImage) { return; }
+
+        fadeTimer = 0f;
+        bFadeToBlack = true;
+        blackoutImage.color = new Color(blackoutImage.color.r, blackoutImage.color.g, blackoutImage.color.b, 0f);
+        blackoutImage.gameObject.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (bFadeToBlack)
+        {
+            fadeTimer += Time.deltaTime;
+
+            if (fadeTimer > fadeDuration) // done fading
+            {
+                fadeTimer = 0f;
+                bFadeToBlack = false;
+
+                blackoutImage.color = new Color(blackoutImage.color.r, blackoutImage.color.g, blackoutImage.color.b, 1f);
+
+                OnBlackoutComplete.Invoke();
+            }
+            else // still fading
+            {
+                float alpha = Mathf.Lerp(0, 1, fadeTimer/fadeDuration);
+                blackoutImage.color = new Color(blackoutImage.color.r, blackoutImage.color.g, blackoutImage.color.b, alpha);
+            }
         }
     }
 }

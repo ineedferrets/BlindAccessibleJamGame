@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
@@ -34,6 +35,9 @@ public class QuestManager : MonoBehaviour
     public GameObject ghostObject;
     public GameObject cauldronObject;
     public GameObject recipeObject;
+
+    [Header("Ending")]
+    public DialogueAsset finalDialogue;
 
     public GameObject currentObjective { get; private set; }
     private List<GameObject> worldRequiredIngredients = new List<GameObject>();
@@ -190,12 +194,16 @@ public class QuestManager : MonoBehaviour
         currentQuestIdx++;
         if (currentQuestIdx == AllQuests.Count)
         {
-            SceneChanger sceneChanger = SceneChanger.Instance;
-            if (sceneChanger)
+            if (finalDialogue != null)
             {
-                sceneChanger.ChangeScene("Menu");
+                StartEnding();
+                return;
             }
-            return;
+            else
+            {
+                EndGame();
+                return;
+            }
         }
 
         _state = QuestState.NotStarted;
@@ -285,5 +293,36 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void StartEnding()
+    {
+        DialogueBoxController dialogueBoxController = DialogueBoxController.instance;
+
+        if (dialogueBoxController == null) { return; }
+
+        DialogueBoxController.OnBlackoutComplete += RunEndingDialogue;
+        dialogueBoxController.StartBlackoutFadeIn();
+    }
+
+    private void RunEndingDialogue()
+    {
+        DialogueBoxController.OnBlackoutComplete -= RunEndingDialogue;
+
+        DialogueBoxController dialogueBoxController = DialogueBoxController.instance;
+        if (dialogueBoxController == null) { return; }
+
+        DialogueBoxController.OnDialogueEnded += EndGame;
+        dialogueBoxController.StartDialogue(finalDialogue, 0);
+    }
+
+    private void EndGame()
+    {
+        DialogueBoxController.OnDialogueEnded -= EndGame;
+
+        SceneChanger sceneChanger = SceneChanger.Instance;
+        if (sceneChanger == null) { return; }
+
+        sceneChanger.ChangeScene("Menu");
     }
 }

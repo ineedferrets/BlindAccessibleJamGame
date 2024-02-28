@@ -7741,6 +7741,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843594864553944390, guid: b31643b201586d14a8613c9f4cae3d3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2496049457000631647, guid: b31643b201586d14a8613c9f4cae3d3b, type: 3}
       propertyPath: m_Name
       value: SceneChangeOverlay

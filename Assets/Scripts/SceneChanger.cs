@@ -11,6 +11,7 @@ public class SceneChanger : MonoBehaviour
     {
         fading_in,
         fading_out,
+        fading_to_black,
         none
     }
 
@@ -84,6 +85,11 @@ public class SceneChanger : MonoBehaviour
         _newCamera = newCamera;
     }
 
+    public void FadeToBlack()
+    {
+        currentFadeStatus = FadeStatus.fading_to_black;
+    }
+
     void Update()
     {
         if (currentFadeStatus != FadeStatus.none)
@@ -102,12 +108,17 @@ public class SceneChanger : MonoBehaviour
                         SceneManager.LoadScene(sceneToLoad);
                         currentFadeStatus = FadeStatus.none;
                     }
-                    else
+                    else if (_oldCamera && _newCamera)
                     {
                         currentFadeStatus = FadeStatus.fading_out;
                         _oldCamera.gameObject.SetActive(false);
                         _newCamera.gameObject.SetActive(true);
                         OnTransitionMidway.Invoke();
+                    }
+                    else
+                    {
+                        OnTransitionMidway.Invoke();
+                        currentFadeStatus = FadeStatus.none;
                     }
                     foreach (ImageInformation image in images)
                     {

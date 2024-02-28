@@ -4998,55 +4998,75 @@ MonoBehaviour:
   optionsMenuGroup: {fileID: 228426860}
   controlsMenuGroup: {fileID: 1145884579}
   creditsMenuGroup: {fileID: 509345693}
-  optionsMenuOpenRead: 
-  controlsMenuOpenRead: 'Player Controls:
+  mainMenuOpenRead: 'Solace: Memories of the Lost
+
+    Main Menu
+
+    Press W to
+    navigate up.
+
+    Press S to navigate down.
+
+    Press Space to confirm selection.
+
+    Press
+    Escape to cancel.'
+  optionsMenuOpenRead: Options Menu.
+  controlsMenuOpenRead: 'Controls Menu.
+
+
+    Player Controls:
 
     W A S D for Movement
 
-    E for Interact
+    E
+    for Interact
 
-    Q
-    for Open Inventory
+    Q for Open Inventory
 
     Escape for Pause
 
-    F for Ping objective
+    F for Ping
+    objective
 
 
     UI Controls:
 
-    W
-    for Navigate up
+    W for Navigate up
 
     A for Navigate down
 
-    Space for submit
+    Space
+    for submit
 
-    Escape for
-    cancel
+    Escape for cancel
 
 
     Recipe controls:
 
-    Q for turn page left
+    Q for turn page
+    left
 
-    E for turn page
-    right
+    E for turn page right
 
     Escape for quit
 
 
     Cauldron controls:
 
-    W for navigate up
+    W
+    for navigate up
 
-    A
-    for navigate down
+    A for navigate down
 
     E for mix couldron
 
-    Escape for leave cauldron'
-  creditsMenuOpenRead: 'Credits for Solace: Memories of the Lost
+    Escape
+    for leave cauldron'
+  creditsMenuOpenRead: 'Credits Menu.
+
+
+    Credits for Solace: Memories of the Lost
 
     Constantin
     Dumitru. Narrative and Dialogue Designer.

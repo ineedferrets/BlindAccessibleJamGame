@@ -19,6 +19,7 @@ public class MainMenuManager : MonoBehaviour
     public CanvasGroup creditsMenuGroup;
 
     [Header("Accessibility")]
+    [TextArea] public string mainMenuOpenRead;
     [TextArea] public string optionsMenuOpenRead;
     [TextArea] public string controlsMenuOpenRead;
     [TextArea] public string creditsMenuOpenRead;
@@ -37,6 +38,11 @@ public class MainMenuManager : MonoBehaviour
         if (startSelectable)
         {
             startSelectable.Select();
+        }
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ScreenReader.StaticReadText(mainMenuOpenRead);
         }
     }
 
@@ -68,7 +74,7 @@ public class MainMenuManager : MonoBehaviour
             selectable.Select();
         }
 
-        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        if (Application.platform != RuntimePlatform.WebGLPlayer && screenReaderText != "")
         {
             ScreenReader.StaticReadText(screenReaderText);
         }

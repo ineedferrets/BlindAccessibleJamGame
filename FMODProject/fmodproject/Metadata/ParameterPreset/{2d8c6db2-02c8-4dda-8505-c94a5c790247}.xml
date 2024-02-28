@@ -21,7 +21,7 @@
 		<property name="enumerationLabels">
 			<value>alchemy_lab</value>
 			<value>sentimental</value>
-			<value>garden</value>
+			<value>epilogue</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

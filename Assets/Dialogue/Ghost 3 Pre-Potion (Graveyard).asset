@@ -209,5 +209,5 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: alchemy_lab

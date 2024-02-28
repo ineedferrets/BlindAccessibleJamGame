@@ -51,7 +51,7 @@ public class CauldronController : MonoBehaviour
         }
 
         UpdateVisuals();
-        ScreenReader.StaticReadText(textToReadOnLaunch);
+        //ScreenReader.StaticReadText(textToReadOnLaunch);
     }
 
     public bool TryAddIngredient(Item item, out AddIngredientOutcome outcome)
@@ -62,7 +62,7 @@ public class CauldronController : MonoBehaviour
             outcome = AddIngredientOutcome.AlreadyContainsIngredient;
             UpdateVisuals();
 
-            ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnItemRemoved, item));
+            //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnItemRemoved, item));
 
             return false;
         }
@@ -70,14 +70,14 @@ public class CauldronController : MonoBehaviour
         {
             outcome = AddIngredientOutcome.IngredientsFull;
 
-            ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnCauldronFull, item));
+            //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnCauldronFull, item));
             return false;
         }
 
         ingredients.Add(item);
         UpdateVisuals();
 
-        ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnItemAdded, item));
+        //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnItemAdded, item));
 
         outcome = AddIngredientOutcome.Success;
         return true;
@@ -85,7 +85,7 @@ public class CauldronController : MonoBehaviour
 
     public void AttemptMix(InputAction.CallbackContext context)
     {
-        if (!context.performed)
+        if (!context.performed || !cauldronCanvasGroup.gameObject || !cauldronCanvasGroup.gameObject.activeSelf)
             return;
 
         Recipe successfulRecipe = null;
@@ -94,7 +94,7 @@ public class CauldronController : MonoBehaviour
             bool bIngredientsMakeRecipe = ingredients.Count > 0 && ingredients.Count == recipe.ingredients.Count;
             if (!bIngredientsMakeRecipe)
             {
-                ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnWrongRecipe));
+                //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnWrongRecipe));
                 Debug.Log("Not enough ingredients.");
                 // What do we do if mismatch of ingredients?
                 return;
@@ -113,13 +113,13 @@ public class CauldronController : MonoBehaviour
         
         if (!successfulRecipe)
         {
-            ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnWrongRecipe));
+            //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnWrongRecipe));
             Debug.Log("Ingredients do not match recipe.");
             // What do we do if it's unsuccessful?
             return;
         }
 
-        ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnRightRecipe, null, successfulRecipe.finalItem));
+        //ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnRightRecipe, null, successfulRecipe.finalItem));
 
         InventoryManager inventoryManager = InventoryManager.Instance;
         foreach (Item item in ingredients)
@@ -136,7 +136,6 @@ public class CauldronController : MonoBehaviour
                 textMP.text = "";
         }
 
-        Debug.Log("Recipe successful");
         inventoryManager.TryAndAdd(successfulRecipe.finalItem);
 
         QuestManager questManager = QuestManager.Instance;

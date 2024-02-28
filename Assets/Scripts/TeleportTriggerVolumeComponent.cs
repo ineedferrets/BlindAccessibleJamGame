@@ -7,6 +7,15 @@ public class TeleportTriggerVolumeComponent : MonoBehaviour
     public Vector2 toTeleportTo {  get; private set; }
     public Camera toChangeCameraTo;
 
+    private void Start()
+    {
+        Transform childTransform = gameObject.transform.Find("ToTeleportTo");
+        if (childTransform != null)
+        {
+            toTeleportTo = childTransform.position;
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

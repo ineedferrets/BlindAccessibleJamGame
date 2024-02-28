@@ -62,7 +62,7 @@ public class InteractableComponent : MonoBehaviour
             pressToInteractVisual.SetActive(toggle);
             TextMeshPro textMeshProUGUI = pressToInteractVisual.GetComponent<TextMeshPro>();
             string textToRead = textMeshProUGUI ? textMeshProUGUI.text : "";
-            if (textToRead != "")
+            if (textToRead != "" && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 ScreenReader.StaticReadText(textToRead);
             }

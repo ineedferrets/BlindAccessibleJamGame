@@ -12,10 +12,9 @@ public class ButtonReader : Button
         base.OnSelect(eventData);
 
         TextMeshProUGUI text = GetComponentInChildren<TextMeshProUGUI>();
-        Debug.Log(text);
-        if (text)
+        if (text && Application.platform != RuntimePlatform.WebGLPlayer)
         {
-            //ScreenReader.StaticReadText(text.text);
+            ScreenReader.StaticReadText("Button. " + text.text);
         }
     }
 }

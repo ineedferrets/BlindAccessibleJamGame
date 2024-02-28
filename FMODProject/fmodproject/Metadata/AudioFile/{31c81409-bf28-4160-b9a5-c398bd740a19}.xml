@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{31c81409-bf28-4160-b9a5-c398bd740a19}">
+		<property name="assetPath">
+			<value>SFX_footstep_gravel-002.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.16408163265306122</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b24f84b4-57dc-4460-873e-f11b8a482b06}</destination>
+		</relationship>
+	</object>
+</objects>

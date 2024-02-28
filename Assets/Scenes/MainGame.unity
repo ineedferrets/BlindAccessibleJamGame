@@ -5408,7 +5408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 999651917}
 --- !u!1 &451999429
 GameObject:
   m_ObjectHideFlags: 0
@@ -15096,7 +15096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 999651917}
 --- !u!1 &853409466
 GameObject:
   m_ObjectHideFlags: 0
@@ -15808,6 +15808,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 999651924}
   moveSpeed: 1
+  fmodPingObjectiveSFXEvent:
+    Guid:
+      Data1: 736458934
+      Data2: 1219640846
+      Data3: 1162113178
+      Data4: 1247617033
+    Path: event:/SFX/SFX_ping_oneshot
+  cemeteryCamera: {fileID: 443241544}
+  gardenCamera: {fileID: 1657172449}
+  homeCamera: {fileID: 829899004}
 --- !u!114 &999651920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16045,6 +16055,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 664831ea-5da9-434d-86c9-94f38724743a
     m_ActionName: UI/SpaceSubmit[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 999651919}
+        m_TargetAssemblyTypeName: PlayerTopDownController, Assembly-CSharp
+        m_MethodName: ObjectivePing
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bc7bcacb-870e-493b-8946-9f1bc015822c
+    m_ActionName: Player/PingObjective[/Keyboard/v]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -22763,7 +22789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  attenuationObject: {fileID: 999651917}
 --- !u!1001 &1670123741
 PrefabInstance:
   m_ObjectHideFlags: 0

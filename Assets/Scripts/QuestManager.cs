@@ -35,7 +35,7 @@ public class QuestManager : MonoBehaviour
     public GameObject cauldronObject;
     public GameObject recipeObject;
 
-    private GameObject currentObjective;
+    public GameObject currentObjective { get; private set; }
     private List<GameObject> worldRequiredIngredients = new List<GameObject>();
 
     private int currentQuestIdx = 0;

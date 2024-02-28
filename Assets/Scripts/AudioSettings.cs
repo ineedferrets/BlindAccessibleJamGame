@@ -10,6 +10,7 @@ public class AudioSettings : MonoBehaviour
 {
 
     FMOD.Studio.EventInstance SFXVolumeTestEvent;
+    FMOD.Studio.EventInstance AccessibilityVolumeTestEvent;
 
     FMOD.Studio.Bus Music;
     FMOD.Studio.Bus SFX;
@@ -26,7 +27,8 @@ public class AudioSettings : MonoBehaviour
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
         Accessibility = FMODUnity.RuntimeManager.GetBus("bus:/Master/Accessibility");
         Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
-        SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/SFXVolumeTest");
+        SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/SFX_VolumeTest");
+        AccessibilityVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Accessibility_VolumeTest");
     }
 
     void Update()
@@ -49,7 +51,14 @@ public class AudioSettings : MonoBehaviour
 
     public void AccessibilityVolumeLevel(float newAccessibilityVolume)
     {
-        MusicVolume = newAccessibilityVolume;
+        AccessibilityVolume = newAccessibilityVolume;
+
+        FMOD.Studio.PLAYBACK_STATE PbState;
+        AccessibilityVolumeTestEvent.getPlaybackState(out PbState);
+        if (PbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        {
+            AccessibilityVolumeTestEvent.start();
+        }
     }
 
     public void SFXVolumeLevel(float newSFXVolume)

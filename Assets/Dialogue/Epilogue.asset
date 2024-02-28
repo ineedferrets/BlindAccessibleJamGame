@@ -18,49 +18,67 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: epilogue
   - speakerName: Mom
     dialogueText: "I\u2019m sorry, deary.\r\nWho are you?\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Mom.\r\nIt\u2019s me!\r\nYour daughter!\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Mom
     dialogueText: "I\u2019m sorry, deary.\r\nBut I have no daughter.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dad
     dialogueText: "I think she went insane from the trip.\r\nBetter leave her be.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "Edward?!\r\nEdward!\r\nWhat is happening?\r\nWhy don\u2019t they
       recognize me?!\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Edward
     dialogueText: "I\u2019m sorry, ma\u2019am.\r\nBut we don\u2019t know who you
       are.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Henry
     dialogueText: "Daddy?\r\nWho is she?\r\nWhy does she know?\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Edward
     dialogueText: "I don\u2019t know, Henry.\r\nI think she\u2019s just lost.\r\nDon\u2019t
       look at her.\r\nIt\u2019s not nice.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: 'No!
 
@@ -68,16 +86,20 @@ MonoBehaviour:
 
       Not like this!
 
-      HADES,
-      YOU BASTARD!
+      HADES, YOU
+      BASTARD!
 
       NOOOO!!!'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: '*Charon falls onto her knees and starts crying, as her own family
       is looking confusedly at her*'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 

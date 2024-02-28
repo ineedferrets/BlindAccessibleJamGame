@@ -31,14 +31,27 @@ public class InventoryManager : MonoBehaviour
     {
         if (items.Contains(item))
         {
+            if (Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                ScreenReader.StaticReadText(item.name + " was not added to inventory as you already have " + " in your inventory.");
+            }
             return false;
         }
         if (items.Count == 3)
         {
+            if (Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                ScreenReader.StaticReadText(item.name + " was not added to inventory as your inventory is full.");
+            }
             return false;
         }
 
         items.Add(item);
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ScreenReader.StaticReadText(item.name + " was added to inventory.");
+        }
 
         if (inventoryUI.gameObject.activeSelf)
         {

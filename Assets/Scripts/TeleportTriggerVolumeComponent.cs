@@ -7,6 +7,9 @@ public class TeleportTriggerVolumeComponent : MonoBehaviour
     public Vector2 toTeleportTo {  get; private set; }
     public Camera toChangeCameraTo;
 
+    [Header("Accessibility")]
+    public string newAreaName;
+
     private void Start()
     {
         Transform childTransform = gameObject.transform.Find("ToTeleportTo");

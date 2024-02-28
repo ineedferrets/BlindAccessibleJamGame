@@ -33,6 +33,14 @@ public class MainMenuManager : MonoBehaviour
             sceneChanger.ChangeScene(GameSceneName);
     }
 
+    public void ExitGame()
+    {
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            Application.Quit();
+        }
+    }
+
     private void Start()
     {
         if (startSelectable)

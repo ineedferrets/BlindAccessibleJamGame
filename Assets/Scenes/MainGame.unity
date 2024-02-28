@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 13147235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10888842, y: 2.98, z: -9.894548}
+  m_LocalPosition: {x: 0.10888842, y: 3.68, z: -9.894548}
   m_LocalScale: {x: 2.2222223, y: 2.5722957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1987,7 +1987,7 @@ Transform:
   m_GameObject: {fileID: 63012414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.006, y: -0.329, z: -9.894548}
+  m_LocalPosition: {x: -3.899, y: -0.329, z: -9.894548}
   m_LocalScale: {x: 2.2222223, y: 2.5722957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2857,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.x
-      value: 1.14761
+      value: 0.7351251
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.y
@@ -2865,7 +2865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.x
-      value: 0.025357366
+      value: 0.23159978
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.y
@@ -2933,6 +2933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toChangeCameraTo: {fileID: 1657172449}
+  newAreaName: Garden
 --- !u!1 &213574106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,7 +5601,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -193.73636, w: -66.30548}
+  m_margin: {x: 0, y: 0, z: -295.85226, w: -66.30548}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6762,7 +6763,7 @@ Transform:
   m_GameObject: {fileID: 631294484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.917, y: -0.329, z: -9.894548}
+  m_LocalPosition: {x: 3.457, y: -0.04, z: -9.894548}
   m_LocalScale: {x: 2.2222223, y: 2.5722957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10780,7 +10781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757564431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10816,9 +10817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a25f86a034cd4e47802cf9583f7e9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageInformationToRead: 'Potion 1 requires the following ingredients. Ingredient
-    1: Found outside. Ingredient 2: Found in the cemetary. Ingredient 3: Taken from
-    a lost soul.'
+  pageInformationToRead: 'Potion 2 requires the following ingredients. Ingredient
+    1: A locket from a lost soul. Ingredient 2: Apollo''s Blessing from the garden.
+    Ingredient 3: Rainbow Pyrite from the garden.'
 --- !u!222 &757564433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14774,19 +14775,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.x
-      value: 1.4360266
+      value: 1.1716928
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.y
-      value: 1.3284652
+      value: 0.54770064
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.x
-      value: 0.16956568
+      value: 0.037398815
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.y
-      value: -0.08411899
+      value: -0.47450125
       objectReference: {fileID: 0}
     - target: {fileID: 6330387356408318871, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Name
@@ -14846,6 +14847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toChangeCameraTo: {fileID: 1657172449}
+  newAreaName: Garden
 --- !u!1001 &785971552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14900,19 +14902,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.x
-      value: 1.4360266
+      value: 1.1352324
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.y
-      value: 1.3284652
+      value: 0.5899044
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.x
-      value: 0.16956568
+      value: 0.10120368
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.y
-      value: -0.08411899
+      value: -0.09466995
       objectReference: {fileID: 0}
     - target: {fileID: 6330387356408318871, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Name
@@ -14972,6 +14974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toChangeCameraTo: {fileID: 829899004}
+  newAreaName: Home
 --- !u!1 &788401029
 GameObject:
   m_ObjectHideFlags: 0
@@ -17563,7 +17566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1135561972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17620,8 +17623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pageInformationToRead: 'Potion 1 requires the following ingredients. Ingredient
-    1: Found outside. Ingredient 2: Found in the cemetary. Ingredient 3: Taken from
-    a lost soul.'
+    1: The candle from a lost soul. Ingredient 2: Mother''s Tear from the garden.
+    Ingredient 3: Twin Tanzanitel from the garden.'
 --- !u!1 &1227699124
 GameObject:
   m_ObjectHideFlags: 0
@@ -20550,7 +20553,7 @@ Transform:
   m_GameObject: {fileID: 1527673341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10888842, y: -3.77, z: -9.894548}
+  m_LocalPosition: {x: 0.10888842, y: -4.38, z: -9.894548}
   m_LocalScale: {x: 2.2222223, y: 2.5722957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22922,19 +22925,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.x
-      value: 1.14761
+      value: 0.9077958
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Size.y
-      value: 1.6848438
+      value: 1.1995037
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.x
-      value: 0.025357366
+      value: -0.0945497
       objectReference: {fileID: 0}
     - target: {fileID: 4742348629596053858, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Offset.y
-      value: -0.26230824
+      value: -0.01963818
       objectReference: {fileID: 0}
     - target: {fileID: 6330387356408318871, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Name
@@ -22998,6 +23001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toChangeCameraTo: {fileID: 443241544}
+  newAreaName: Cemetery
 --- !u!1 &1672678587
 GameObject:
   m_ObjectHideFlags: 0
@@ -24571,7 +24575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1750494830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24607,9 +24611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a25f86a034cd4e47802cf9583f7e9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pageInformationToRead: 'Potion 1 requires the following ingredients. Ingredient
-    1: Found outside. Ingredient 2: Found in the cemetary. Ingredient 3: Taken from
-    a lost soul.'
+  pageInformationToRead: 'Potion 3 requires the following ingredients. Ingredient
+    1: A family photo from a lost soul. Ingredient 2: A rose from the garden. Ingredient
+    3: Philosopher''s stone from the garden.'
 --- !u!222 &1750494832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27435,7 +27439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330387356408318871, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_Name
-      value: BookcaseInteractionTrigger
+      value: RecipeInteractionTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 6330387356408318871, guid: 3e5124f24f7fb1d41b89edd32ab7eaa7, type: 3}
       propertyPath: m_IsActive

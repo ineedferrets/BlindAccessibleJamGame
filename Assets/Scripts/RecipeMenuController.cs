@@ -19,15 +19,14 @@ public class RecipeMenuController : MonoBehaviour
         if (openMenu)
         {
             SetupRecipe();
-
-            if (Application.platform != RuntimePlatform.WebGLPlayer) 
-                ScreenReader.StaticReadText(textToReadOnOpen);
         }
 
         QuestManager questManager = QuestManager.Instance;
         if (questManager == null) { return; }
 
-        questManager.UpdateObjectivesInformation();
+        // Not good way to check this.
+        if (questManager.currentObjective.name.Contains("Recipe"))
+            questManager.UpdateObjectivesInformation();
     }
 
     private void SetupRecipe()

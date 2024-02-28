@@ -120,35 +120,35 @@ public class QuestManager : MonoBehaviour
 
         _state = QuestState.Ongoing;
 
-        objectiveBodyText.text = "- Go to recipe book to find ingredients.";
-        currentObjective = recipeObject;
-
         // This is really really bad and needs to be entirely rethought after the jam is complete.
         CauldronController cauldron = CauldronController.instance;
-        if (cauldron)
+        if (cauldron == null) { return; }
+        
+        Recipe requiredRecipe = null;
+        foreach (Recipe recipe in cauldron.recipes)
         {
-            Recipe requiredRecipe = null;
-            foreach (Recipe recipe in cauldron.recipes)
+            if (currentQuest.RequiredItems.Contains(recipe.finalItem))
             {
-                if (currentQuest.RequiredItems.Contains(recipe.finalItem))
-                {
-                    requiredRecipe = recipe;
-                    break;
-                }
+                requiredRecipe = recipe;
+                break;
             }
-            if (requiredRecipe == null) { return; }
+        }
+        if (requiredRecipe == null) { return; }
 
-            List<GameObject> itemSpawners = new List<GameObject>(GameObject.FindGameObjectsWithTag("ItemSpawner"));
+        // Update objective.
+        string objectiveDescription = "Go to recipe book at home to find the ingredients for " + requiredRecipe.finalItem.name + ".";
+        SetObjective(new List<string> { objectiveDescription }, recipeObject);
+
+        List <GameObject> itemSpawners = new List<GameObject>(GameObject.FindGameObjectsWithTag("ItemSpawner"));
             
-            foreach (GameObject spawnerObj in itemSpawners)
-            {
-                ItemSpawner itemSpawner = spawnerObj.GetComponent<ItemSpawner>();
-                if (!itemSpawner) continue;
+        foreach (GameObject spawnerObj in itemSpawners)
+        {
+            ItemSpawner itemSpawner = spawnerObj.GetComponent<ItemSpawner>();
+            if (!itemSpawner) continue;
 
-                if (requiredRecipe.ingredients.Contains(itemSpawner.itemToSpawn))
-                {
-                    itemSpawner.SpawnItem();
-                }
+            if (requiredRecipe.ingredients.Contains(itemSpawner.itemToSpawn))
+            {
+                itemSpawner.SpawnItem();
             }
         }
     }
@@ -215,10 +215,11 @@ public class QuestManager : MonoBehaviour
 
     public void UpdateObjectivesInformation()
     {
+        List<string> objectives = new List<string>();
         if (_state == QuestState.NotStarted)
         {
-            objectiveBodyText.text = "- Speak to the ghost in the cemetery.";
-            currentObjective = ghostObject;
+            objectives.Add("Speak to the ghost that's appeared in the cemetery.");
+            SetObjective(objectives, ghostObject);
             return;
         }
         
@@ -239,8 +240,8 @@ public class QuestManager : MonoBehaviour
 
             if (bPlayerHasRequiredItems)
             {
-                objectiveBodyText.text = "- Speak to the ghost to hand in the potion.";
-                currentObjective = ghostObject;
+                objectives.Add("Speak to the ghost in the cemetery to hand in the potion.");
+                SetObjective(objectives, ghostObject);
                 return;
             }
 
@@ -266,20 +267,20 @@ public class QuestManager : MonoBehaviour
 
             if (missingItems.Count == 0)
             {
-                objectiveBodyText.text = "- Go to cauldron to combine ingredients.";
-                currentObjective = cauldronObject;
+                objectives.Add("Go to the cauldron at home to combine ingredients.");
+                SetObjective(objectives, cauldronObject);
+                return;
             }
             else
             {
-                string objectiveString = "";
                 foreach (var item in missingItems)
                 {
-                    objectiveString += "- Find and collect " + item.name + "\n";
+                    objectives.Add("Find and collect " + item.name + ".");
                 }
-                objectiveBodyText.text = objectiveString;
                 
                 // Find the spawner for the first item.
                 List<GameObject> itemSpawnerObjs = new List<GameObject>(GameObject.FindGameObjectsWithTag("ItemSpawner"));
+                GameObject itemObjective;
                 foreach (var itemSpawnerObj in itemSpawnerObjs)
                 {
                     ItemSpawner itemSpawner = itemSpawnerObj.GetComponent<ItemSpawner>();
@@ -287,11 +288,40 @@ public class QuestManager : MonoBehaviour
 
                     if (itemSpawner.itemToSpawn == missingItems[0])
                     {
-                        currentObjective = itemSpawnerObj;
+                        itemObjective = itemSpawnerObj;
                         break;
                     }
                 }
+
+                SetObjective(objectives, currentObjective);
             }
+        }
+    }
+
+    private void SetObjective(List<string> newObjectives, GameObject newObjectiveObject)
+    {
+        currentObjective = newObjectiveObject;
+
+        string finalReaderString = "Current Objective: ";
+        string finalUIString = "";
+
+        finalReaderString += newObjectives[0];
+        finalUIString += "- " + newObjectives[0];
+        
+        if (newObjectives.Count >1)
+        {
+            for (int objectiveIdx = 1; objectiveIdx < newObjectives.Count; ++objectiveIdx)
+            {
+                finalReaderString += " and " + newObjectives[objectiveIdx];
+                finalUIString += "\n- " + newObjectives[objectiveIdx];
+            }
+        }
+
+        objectiveBodyText.text = finalUIString;
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ScreenReader.StaticReadText(finalReaderString);
         }
     }
 

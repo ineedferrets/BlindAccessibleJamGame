@@ -165,6 +165,11 @@ public class PlayerTopDownController : MonoBehaviour
 
         Camera.main.gameObject.SetActive(false);
         currentTriggerCollision.toChangeCameraTo.gameObject.SetActive(true);
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ScreenReader.StaticReadText("Moved to " + currentTriggerCollision.newAreaName + ".");
+        }
     }
 
     // INTERACTION CODE ----------------------------------------------

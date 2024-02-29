@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Twin Tearstone
   m_EditorClassIdentifier: 
   id: 0
-  itemName: Twin Tearstone
+  itemName: Twin Tanzanite
   icon: {fileID: 21300000, guid: 677f9b81b0eabb149aad9b0d5ac97bbf, type: 3}
   prefab: {fileID: 6023582688598769468, guid: 6c455da9ac72aff40b57841fcec9d7f9, type: 3}

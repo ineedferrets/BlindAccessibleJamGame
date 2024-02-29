@@ -20,5 +20,4 @@ MonoBehaviour:
   RequiredItems:
   - {fileID: 11400000, guid: 9386d69318d98b24cb1a2eacde50bfbc, type: 2}
   GhostSprite: {fileID: 21300000, guid: b4870862547b05b4c9b8b39a15544f8c, type: 3}
-  isInMirror: 0
-  ObjectiveStartOverride: Look at your reflection in the mirror in the cemetery
+  ObjectiveStartOverride: Look at your reflection in the mirror in the cemetery.

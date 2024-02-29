@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e2ccbd71-a4c6-431e-9b2a-0a415f8f985d}">
+		<property name="assetPath">
+			<value>BRS_Forest_Wind_Leaves_Birds.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>46.950748299319727</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b24f84b4-57dc-4460-873e-f11b8a482b06}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a8430a1c-d4b0-4659-8dd5-5cc897ea5235}">
+		<property name="assetPath">
+			<value>AMBISONIC_A EXT Field in the Evening in Lagrangeville NY 01.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>4</value>
+		</property>
+		<property name="length">
+			<value>180.18000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b24f84b4-57dc-4460-873e-f11b8a482b06}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -2415,11 +2415,8 @@ MonoBehaviour:
   ghostObject: {fileID: 1234879158}
   cauldronObject: {fileID: 1573797928}
   recipeObject: {fileID: 970272249}
-<<<<<<< Updated upstream
-  finalDialogue: {fileID: 11400000, guid: 293852eab8230564ab53c65f7c64b3a2, type: 2}
-=======
   mirrorObject: {fileID: 1996518045}
->>>>>>> Stashed changes
+  finalDialogue: {fileID: 11400000, guid: 293852eab8230564ab53c65f7c64b3a2, type: 2}
 --- !u!4 &114830198
 Transform:
   m_ObjectHideFlags: 0
@@ -3963,7 +3960,7 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &323209121
@@ -10776,6 +10773,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 09fc9ac538179714ea7e5173446dc66b, type: 2}
   - {fileID: 11400000, guid: 0bf34611ae440bf45a855abf067b13db, type: 2}
   - {fileID: 11400000, guid: e438e2ce0846bd94b9c8a1fbc7786f01, type: 2}
+  successfulMixRecipeSFXReference:
+    Guid:
+      Data1: 1390597216
+      Data2: 1187187846
+      Data3: -888517200
+      Data4: -1374279597
+    Path: event:/SFX/SFX_potion_complete
   textToReadOnLaunch: Navigate to item for cauldron by pressing W and S. Press Space
     to add it to cauldron. Press Space again on the same item to remove it. Press
     E to mix the cauldron. Press Escape to leave.
@@ -32860,10 +32864,7 @@ SceneRoots:
   - {fileID: 890878712}
   - {fileID: 736657805}
   - {fileID: 643341372}
-<<<<<<< Updated upstream
   - {fileID: 206506788}
   - {fileID: 965791664}
   - {fileID: 1473978393}
-=======
   - {fileID: 1955264798}
->>>>>>> Stashed changes

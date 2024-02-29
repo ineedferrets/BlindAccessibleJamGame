@@ -227,10 +227,6 @@ public class QuestManager : MonoBehaviour
         List<string> objectives = new List<string>();
         if (_state == QuestState.NotStarted)
         {
-<<<<<<< Updated upstream
-            objectives.Add("Speak to the ghost that's appeared in the cemetery.");
-            SetObjective(objectives, ghostObject);
-=======
             QuestAsset currentQuest = AllQuests[currentQuestIdx];
             if (currentQuest == null) { return; }
 
@@ -267,8 +263,6 @@ public class QuestManager : MonoBehaviour
             }
 
             objectiveBodyText.text = questText;
-  
->>>>>>> Stashed changes
             return;
         }
         

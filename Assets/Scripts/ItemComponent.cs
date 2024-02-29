@@ -9,12 +9,17 @@ public class ItemComponent : MonoBehaviour
 
     [SerializeField] public TextMeshPro itemPickUpText;
 
+    [SerializeField] public FMODUnity.EventReference pickUpItemSoundReference;
+    private FMOD.Studio.EventInstance pickUpItemInstance;
+
     private void Start()
     {
         if (itemPickUpText && itemAsset)
         {
             itemPickUpText.text = itemPickUpText.text.Replace("pick up", "pick up " + itemAsset.name);
         }
+
+        pickUpItemInstance = FMODUnity.RuntimeManager.CreateInstance(pickUpItemSoundReference);
     }
 
     public void OnPickUp(bool bDestroyItem = true)
@@ -26,16 +31,18 @@ public class ItemComponent : MonoBehaviour
 
         bool bWasSuccessful = inventoryManager.TryAndAdd(itemAsset);
 
-        if (bWasSuccessful && bDestroyItem)
-        {
-            Destroy(gameObject);
-        }
-
         if (bWasSuccessful)
         {
             QuestManager questManager = QuestManager.Instance;
             if (questManager == null) { return; }
             questManager.UpdateObjectivesInformation();
+
+            pickUpItemInstance.start();
+        }
+
+        if (bWasSuccessful && bDestroyItem)
+        {
+            Destroy(gameObject);
         }
     }
 

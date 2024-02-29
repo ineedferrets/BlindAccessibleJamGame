@@ -19,8 +19,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: none
   - speakerName: ????
     dialogueText: "D-doctor? Doctor\u2026 Charon?"
     dialogueSpeed: 40

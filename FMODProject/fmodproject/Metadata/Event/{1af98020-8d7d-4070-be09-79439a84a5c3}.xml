@@ -60,7 +60,11 @@
 			<destination>{30a1e55b-0885-48a5-9118-3c2aab9285bc}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{7887d77c-98dc-4b0d-9fb2-d1c547c6e5a9}" />
+	<object class="EventAutomatableProperties" id="{7887d77c-98dc-4b0d-9fb2-d1c547c6e5a9}">
+		<property name="maximumDistance">
+			<value>8</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ac6944d1-6c97-4980-bfd6-9b4e88351e9f}" />
 	<object class="GroupTrack" id="{122bcc29-b8bd-49ba-a524-2fb22e657890}">
 		<relationship name="modules">
@@ -85,6 +89,9 @@
 		<relationship name="modules">
 			<destination>{1c850638-fcf9-4628-98d5-44557cda42c7}</destination>
 			<destination>{3d6e3469-f2b8-40fd-a380-5dd1e8edbd36}</destination>
+		</relationship>
+		<relationship name="markers">
+			<destination>{43b84460-f7e7-468a-8ecc-dbdd5d382fa0}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{71e9a0c3-35be-4c8c-9a61-a304cea8da19}">
@@ -179,8 +186,23 @@
 			<destination>{684bcbc9-9ae4-4ad8-8425-b56744304222}</destination>
 		</relationship>
 	</object>
+	<object class="LoopRegion" id="{43b84460-f7e7-468a-8ecc-dbdd5d382fa0}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>0.22179772647369039</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{b031f3b6-43d7-4541-8ea3-ae3be1e38a1e}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{ac6944d1-6c97-4980-bfd6-9b4e88351e9f}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{522686bb-935f-4d34-b64d-6e188301e77a}">
 		<relationship name="effects">
+			<destination>{bf524cf3-1282-4989-b1ca-4d9517d12a62}</destination>
 			<destination>{6d91b186-2771-4309-8c8b-0562094d9c66}</destination>
 		</relationship>
 	</object>
@@ -276,6 +298,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{51bf952f-565c-466e-84c8-763791a3e227}" />
+	<object class="CompressorEffect" id="{bf524cf3-1282-4989-b1ca-4d9517d12a62}">
+		<property name="threshold">
+			<value>-26.5</value>
+		</property>
+		<property name="gain">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{6d91b186-2771-4309-8c8b-0562094d9c66}" />
 	<object class="MixerBusFader" id="{e24fb218-57d9-4c45-b102-f4ce1f8c5114}" />
 	<object class="AutomationCurve" id="{2a73dff9-e65a-4fd7-a545-8805065cea91}">

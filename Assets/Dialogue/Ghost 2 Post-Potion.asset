@@ -18,16 +18,22 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Jonathan
     dialogueText: '*grunts*'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: sentimental
   - speakerName: Dr. Charon
     dialogueText: "Drink this.\r\nMay you find your lost love.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr Charon
     dialogueText: 'And if you might not recognize each other.
 
@@ -36,48 +42,27 @@ MonoBehaviour:
 
       And again.
 
-      As many times as you need
-
-'
+      As many times as you need'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-  - speakerName: Dr Charon
-    dialogueText: 'And if you might not recognize each other.
-
-      May you fall
-      in love again.
-
-      And again.
-
-      As many times as you need
-
-'
-    dialogueSpeed: 40
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Dr Charon
     dialogueText: "Rest in peace, Jonathan.\r\nRest in peace\u2026"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-  - speakerName: Dr Charon
-    dialogueText: "Rest in peace, Jonathan.\r\nRest in peace\u2026"
-    dialogueSpeed: 40
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: '*Jonathan drinks the concoction and leaves for the afterlife,
       leaving behind the memory of his sweet Michael*'
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-  - speakerName: Narrator
-    dialogueText: '*Jonathan drinks the concoction and leaves for the afterlife,
-      leaving behind the memory of his sweet Michael*'
-    dialogueSpeed: 40
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 
   - speakerName: Narrator
     dialogueText: "YOU\u2019VE ACQUIRED THE MEMORY: *GRUNT*\r\nItem description:
       This memory contains the deep love of a soldier for a partner he was never
@@ -85,3 +70,5 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: alchemy_lab

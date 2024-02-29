@@ -25,14 +25,14 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: sentimental
   - speakerName: Dr. Charon
     dialogueText: "Drink this.\nAnd may you find relief.\r\nThe relief of cleansing
       all your memories of them.\r\nBoth good\u2026\r\nAnd bad\u2026\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
+    portraitOnLeft: 1
     triggerNewMusic: 1
     triggerMusicTrack: sentimental
   - speakerName: Narrator
@@ -57,5 +57,5 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: alchemy_lab

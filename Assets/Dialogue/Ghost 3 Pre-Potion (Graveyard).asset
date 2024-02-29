@@ -20,8 +20,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: none
   - speakerName: Dr. Charon
     dialogueText: "\u201CLook into the mirror to find your final test\u201D\r\nHmm.\r\nMaybe
       it\u2019ll suck me into the underworld.\r\nMaybe it\u2019ll shatter in a thousand
@@ -195,17 +195,9 @@ MonoBehaviour:
     portraitOnLeft: 0
     triggerNewMusic: 0
     triggerMusicTrack: 
-  - speakerName: Dr. Charon
-    dialogueText: "Guess he did keep his word after all.\r\nAll right.\r\nTime for
-      one final potion\r"
-    dialogueSpeed: 40
-    characterPortrait: {fileID: 0}
-    portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
-  - speakerName: Narrator
+  - speakerName: "\r\rNarrator"
     dialogueText: "You\u2019ve acquired item: FAMILY PHOTO\r\nItem description: A
-      depiction of Charon\u2019s beloved family.\r\r"
+      depiction of Charon\u2019s beloved family."
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0

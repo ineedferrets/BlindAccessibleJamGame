@@ -18,9 +18,13 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 1
+    triggerMusicTrack: sentimental
   - speakerName: Hades
     dialogueText: "I said you\u2019ll be reunited with your family.\r\nThat you\u2019ll
-      remember them.\r\nBut I wonder.\r\nWill they remember you?\r\nMwahaha!\r\n*disappears*\r"
+      remember them.\r\nBut I wonder... Will they remember you?\r\nMwahaha!\r\n*disappears*\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
+    triggerNewMusic: 0
+    triggerMusicTrack: 

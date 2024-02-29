@@ -26,4 +26,9 @@ using FMOD;
     {
         
     }
+
+    private void OnDestroy()
+    {
+        eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }

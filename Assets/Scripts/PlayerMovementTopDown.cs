@@ -51,7 +51,9 @@ public class PlayerTopDownController : MonoBehaviour
 
     private void Start()
     {
+        //create instances of the fmod events for ping and footsteps
         objectivePingInstance = FMODUnity.RuntimeManager.CreateInstance(fmodPingObjectiveSFXEvent);
+        footstepSoundInstance = FMODUnity.RuntimeManager.CreateInstance(fmodFootstepSound);
     }
 
     private void OnDestroy()
@@ -93,9 +95,20 @@ public class PlayerTopDownController : MonoBehaviour
     // INPUT CODE ----------------------------------------------
     public void Move(InputAction.CallbackContext context)
     {
+        //If input entered for movement, then play footstep sounds
+        if (context.performed)
+        {
+            footstepSoundInstance.start();
+        }
+
+        //if input released for movement, then stop footstep sounds
+        else if (context.canceled)
+        {
+            footstepSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+        
         xMovement = context.ReadValue<Vector2>().x;
         yMovement = context.ReadValue<Vector2>().y;
-        FMODUnity.RuntimeManager.PlayOneShot(fmodFootstepSound);
     }
 
     public void Interact(InputAction.CallbackContext context)

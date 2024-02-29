@@ -25,8 +25,9 @@ public class QuestManager : MonoBehaviour
     public List<QuestAsset> AllQuests;
     public bool bStartInitialQuestInDialogue;
 
-    [Header("Ghost")]
+    [Header("NPCs")]
     public SpriteRenderer spriteRendererForGhost;
+    public SpriteRenderer spriteRendererForMirror;
 
     [Header("UI")]
     public TextMeshProUGUI objectiveBodyText;
@@ -35,6 +36,7 @@ public class QuestManager : MonoBehaviour
     public GameObject ghostObject;
     public GameObject cauldronObject;
     public GameObject recipeObject;
+    public GameObject mirrorObject;
 
     [Header("Ending")]
     public DialogueAsset finalDialogue;
@@ -208,6 +210,13 @@ public class QuestManager : MonoBehaviour
 
         _state = QuestState.NotStarted;
 
+        QuestAsset questAsset = AllQuests[currentQuestIdx];
+        if (questAsset == null) { return; }
+
+        if (questAsset.isInMirror)
+        {
+            spriteRendererForMirror.sprite = AllQuests[currentQuestIdx].GhostSprite;
+        }
         spriteRendererForGhost.sprite = AllQuests[currentQuestIdx].GhostSprite;
 
         UpdateObjectivesInformation();
@@ -218,8 +227,48 @@ public class QuestManager : MonoBehaviour
         List<string> objectives = new List<string>();
         if (_state == QuestState.NotStarted)
         {
+<<<<<<< Updated upstream
             objectives.Add("Speak to the ghost that's appeared in the cemetery.");
             SetObjective(objectives, ghostObject);
+=======
+            QuestAsset currentQuest = AllQuests[currentQuestIdx];
+            if (currentQuest == null) { return; }
+
+            string questText = currentQuest.ObjectiveStartOverride;
+            bool bGhostInMirror = currentQuest.isInMirror;
+
+            print(questText);
+
+            if (bGhostInMirror)
+            {
+                if (questText == string.Empty)
+                {
+                    questText = "- Speak to the image in the mirror in the lab.";
+                }
+
+                mirrorObject.SetActive(true);
+                ghostObject.SetActive(false);
+                currentObjective = mirrorObject;
+
+                spriteRendererForMirror.sprite = currentQuest.GhostSprite;
+            }
+            else
+            {
+                if (questText == string.Empty)
+                {
+                    questText = "- Speak to the ghost in the cemetery.";
+                }
+
+                mirrorObject.SetActive(false);
+                ghostObject.SetActive(true);
+                currentObjective = ghostObject;
+                
+                spriteRendererForGhost.sprite = currentQuest.GhostSprite;
+            }
+
+            objectiveBodyText.text = questText;
+  
+>>>>>>> Stashed changes
             return;
         }
         

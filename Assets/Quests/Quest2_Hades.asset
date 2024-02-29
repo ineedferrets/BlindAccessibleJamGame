@@ -17,4 +17,10 @@ MonoBehaviour:
   EndQuestDialogue: {fileID: 0}
   GivenItems: []
   RequiredItems: []
+<<<<<<< Updated upstream
   GhostSprite: {fileID: 21300000, guid: 077da61be6bd38244bc52bff2b6fa0db, type: 3}
+=======
+  GhostSprite: {fileID: 21300000, guid: 56f40cc129158c14cbafbe2fb95e0cf1, type: 3}
+  isInMirror: 1
+  ObjectiveStartOverride: 
+>>>>>>> Stashed changes

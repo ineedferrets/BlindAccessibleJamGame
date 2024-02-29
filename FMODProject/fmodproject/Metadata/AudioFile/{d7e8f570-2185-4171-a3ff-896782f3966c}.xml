@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d7e8f570-2185-4171-a3ff-896782f3966c}">
+		<property name="assetPath">
+			<value>SFX_fireplace-002.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>20.390113378684806</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b24f84b4-57dc-4460-873e-f11b8a482b06}</destination>
+		</relationship>
+	</object>
+</objects>

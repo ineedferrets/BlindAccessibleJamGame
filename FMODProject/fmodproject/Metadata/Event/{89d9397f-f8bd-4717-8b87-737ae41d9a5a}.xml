@@ -5,7 +5,7 @@
 			<value>SFX_lab_ambience</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4dcc6450-c15d-41e6-9a8b-4f52be64f089}</destination>
@@ -56,7 +56,7 @@
 			<destination>{8552493d-d797-495d-a162-eef1181dbc62}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{30a1e55b-0885-48a5-9118-3c2aab9285bc}</destination>
+			<destination>{b0df1bac-93c3-4f70-bd1b-76ff04a5dfa2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{ead34431-ae2a-4503-837a-4ba714699ee0}" />
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f74f05c4-348c-4f8a-bb86-b6b1407a71fd}">
+		<property name="volume">
+			<value>-7.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{7db84cb1-4081-4a42-93ac-65bca3e9ae88}</destination>
 		</relationship>
@@ -82,7 +85,15 @@
 			<destination>{c32bf1f4-40f1-4e2c-9458-f459c368c645}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{6d9f7996-632e-4509-9d92-21303ec46159}" />
+	<object class="MultiSound" id="{6d9f7996-632e-4509-9d92-21303ec46159}">
+		<property name="playbackMode">
+			<value>1</value>
+		</property>
+		<relationship name="sounds">
+			<destination>{e63bdb8c-d93f-439f-8365-eaa9ea269531}</destination>
+			<destination>{ec7413c5-4b19-47b3-88c7-ee23ba0d1c72}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{221a90bc-4807-40bd-9c90-c03e4084735d}">
 		<relationship name="effects">
 			<destination>{1e048aba-55cc-461e-a07f-bf887a6a67e6}</destination>
@@ -95,6 +106,19 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2db89b92-7d02-48cd-81bb-229653a2d621}" />
+	<object class="EventSound" id="{e63bdb8c-d93f-439f-8365-eaa9ea269531}">
+		<relationship name="event">
+			<destination>{190dc063-2c53-4271-b196-551a9857aa0b}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{ec7413c5-4b19-47b3-88c7-ee23ba0d1c72}">
+		<property name="volume">
+			<value>-9</value>
+		</property>
+		<relationship name="event">
+			<destination>{9bc5c56f-94ac-42a5-82cd-2620deb4371d}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{1e048aba-55cc-461e-a07f-bf887a6a67e6}" />
 	<object class="MixerBusFader" id="{e04e3ef8-f403-4686-809c-3d422cba7180}" />
 </objects>

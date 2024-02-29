@@ -83,8 +83,8 @@ MonoBehaviour:
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
-    triggerNewMusic: 0
-    triggerMusicTrack: 
+    triggerNewMusic: 1
+    triggerMusicTrack: hades
   - speakerName: Dr. Charon
     dialogueText: "Impossible.\r\nI remember my parents.\r\nMy beloved Edward.\r\nMy
       sweet little Henry.\r"

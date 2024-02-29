@@ -16,4 +16,8 @@ public class QuestAsset : ScriptableObject
 
     [Header("Ghost")]
     public Sprite GhostSprite;
+    public bool isInMirror;
+
+    [Header("Overrides")]
+    [TextArea] public string ObjectiveStartOverride;
 }

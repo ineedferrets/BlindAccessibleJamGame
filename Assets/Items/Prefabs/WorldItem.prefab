@@ -100,6 +100,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemAsset: {fileID: 0}
   itemPickUpText: {fileID: 1928934560397641233}
+  pickUpItemSoundReference:
+    Guid:
+      Data1: 619445396
+      Data2: 1097491860
+      Data3: -184301939
+      Data4: -1256000627
+    Path: event:/SFX/SFX_pickup_item
 --- !u!1001 &7048472555641083915
 PrefabInstance:
   m_ObjectHideFlags: 0

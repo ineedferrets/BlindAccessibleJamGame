@@ -62,7 +62,13 @@ public class DialogueBoxController : MonoBehaviour
         {
             DialogueSegment dialogueSegment = dialogueAsset.dialogue[i];
             nameText.text = dialogueSegment.speakerName;
-            //checks if this dialogue line needs to trigger new music
+            string readerString = dialogueSegment.speakerName.Contains("?") ? "Unknown speaker." : dialogueSegment.speakerName + ".";
+            readerString += " " + dialogueSegment.dialogueText + ". Press space to continue dialogue.";
+            if (Application.platform != RuntimePlatform.WebGLPlayer)
+            {
+                ScreenReader.StaticReadText(readerString);
+            }
+                //checks if this dialogue line needs to trigger new music
             //if so, runs SetNewMusicTrack method in MusicManager
             if (dialogueSegment.triggerNewMusic == true)
             {
@@ -75,6 +81,11 @@ public class DialogueBoxController : MonoBehaviour
                 yield return null;
             }
             skipLineTriggered = false;
+        }
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ScreenReader.StaticReadText("Dialogue Ended.");
         }
 
         OnDialogueEnded?.Invoke();

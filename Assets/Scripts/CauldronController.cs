@@ -13,6 +13,10 @@ public class CauldronController : MonoBehaviour
     public List<Image> ingredientMenuImages = new List<Image>();
     public List<Recipe> recipes = new List<Recipe>();
 
+    [Header("SFX")]
+    public FMODUnity.EventReference successfulMixRecipeSFXReference;
+    private FMOD.Studio.EventInstance successfulMixRecipeSFXInstance;
+
     [Header("Accessibility")]
     [TextArea] public string textToReadOnLaunch = "";
     [TextArea] public string textToReadOnItemAdded = "(Ingredient) added to cauldron.";
@@ -41,6 +45,11 @@ public class CauldronController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        successfulMixRecipeSFXInstance = FMODUnity.RuntimeManager.CreateInstance(successfulMixRecipeSFXReference);
     }
 
     public void OpenMenu()
@@ -126,6 +135,11 @@ public class CauldronController : MonoBehaviour
             return;
         }
 
+        MixRecipe(successfulRecipe);
+    }
+
+    private void MixRecipe(Recipe successfulRecipe)
+    {
         if (Application.platform != RuntimePlatform.WebGLPlayer)
             ScreenReader.StaticReadText(ParseTextForSpeech(textToReadOnRightRecipe, null, successfulRecipe.finalItem));
 
@@ -145,6 +159,8 @@ public class CauldronController : MonoBehaviour
         }
 
         inventoryManager.TryAndAdd(successfulRecipe.finalItem);
+
+        successfulMixRecipeSFXInstance.start();
 
         QuestManager questManager = QuestManager.Instance;
         if (questManager == null) { return; }

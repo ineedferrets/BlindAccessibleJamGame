@@ -16032,6 +16032,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 999651924}
   moveSpeed: 1
+  fmodFootstepSound:
+    Guid:
+      Data1: 452558880
+      Data2: 1081118077
+      Data3: 1132005822
+      Data4: -1012562790
+    Path: event:/SFX/SFX_footsteps
+  fmodTeleportSound:
+    Guid:
+      Data1: -854308872
+      Data2: 1197151572
+      Data3: 871978638
+      Data4: -742050105
+    Path: event:/SFX/SFX_teleport
   fmodPingObjectiveSFXEvent:
     Guid:
       Data1: 736458934

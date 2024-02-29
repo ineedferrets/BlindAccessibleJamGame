@@ -13,6 +13,9 @@ public class PlayerTopDownController : MonoBehaviour
     public float moveSpeed = 5f;
     float xMovement;
     float yMovement;
+    public FMODUnity.EventReference fmodFootstepSound;
+    private FMOD.Studio.EventInstance footstepSoundInstance;
+    public FMODUnity.EventReference fmodTeleportSound;
 
     [Header("Ping System")]
     public FMODUnity.EventReference fmodPingObjectiveSFXEvent;
@@ -92,6 +95,7 @@ public class PlayerTopDownController : MonoBehaviour
     {
         xMovement = context.ReadValue<Vector2>().x;
         yMovement = context.ReadValue<Vector2>().y;
+        FMODUnity.RuntimeManager.PlayOneShot(fmodFootstepSound);
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -165,6 +169,9 @@ public class PlayerTopDownController : MonoBehaviour
 
         Camera.main.gameObject.SetActive(false);
         currentTriggerCollision.toChangeCameraTo.gameObject.SetActive(true);
+
+        //Play Teleport sound
+        FMODUnity.RuntimeManager.PlayOneShot(fmodTeleportSound);
 
         if (Application.platform != RuntimePlatform.WebGLPlayer)
         {

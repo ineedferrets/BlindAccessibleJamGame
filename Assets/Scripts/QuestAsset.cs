@@ -16,6 +16,7 @@ public class QuestAsset : ScriptableObject
 
     [Header("Ghost")]
     public Sprite GhostSprite;
+    public bool isHades;
 
     [Header("Overrides")]
     [TextArea] public string ObjectiveStartOverride;

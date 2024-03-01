@@ -27,6 +27,7 @@ public class QuestManager : MonoBehaviour
 
     [Header("NPCs")]
     public SpriteRenderer spriteRendererForGhost;
+    public SpriteRenderer spriteRendererForHades;
 
     [Header("UI")]
     public TextMeshProUGUI objectiveBodyText;
@@ -35,6 +36,7 @@ public class QuestManager : MonoBehaviour
     public GameObject ghostObject;
     public GameObject cauldronObject;
     public GameObject recipeObject;
+    public GameObject hadesObject;
 
     [Header("Ending")]
     public DialogueAsset finalDialogue;
@@ -211,6 +213,11 @@ public class QuestManager : MonoBehaviour
         QuestAsset questAsset = AllQuests[currentQuestIdx];
         if (questAsset == null) { return; }
 
+        if (questAsset.isHades)
+        {
+            spriteRendererForHades.sprite = AllQuests[currentQuestIdx].GhostSprite;
+        }
+
         spriteRendererForGhost.sprite = AllQuests[currentQuestIdx].GhostSprite;
 
         UpdateObjectivesInformation();
@@ -225,16 +232,36 @@ public class QuestManager : MonoBehaviour
             if (currentQuest == null) { return; }
 
             string questText = currentQuest.ObjectiveStartOverride;
+            bool bGhostIsHades = currentQuest.isHades;
 
-            if (questText == string.Empty)
+            print(questText);
+
+            if (bGhostIsHades)
             {
-                questText = "Speak to the figure in the cemetery.";
+                if (questText == string.Empty)
+                {
+                    questText = "- Speak to Hades in the garden";
+                }
+                hadesObject.SetActive(true);
+                ghostObject.SetActive(false);
+                currentObjective = hadesObject;
+                spriteRendererForHades.sprite = currentQuest.GhostSprite;
+            }
+            else
+            {
+                if (questText == string.Empty)
+                {
+                    questText = "Speak to the figure in the cemetery.";
+                }
+                hadesObject.SetActive(false);
+                ghostObject.SetActive(true);
+                currentObjective = ghostObject;
+                spriteRendererForGhost.sprite = currentQuest.GhostSprite;
             }
 
             SetObjective(new List<string> { questText }, ghostObject);
-                
-            spriteRendererForGhost.sprite = currentQuest.GhostSprite;
-            return;
+            //spriteRendererForGhost.sprite = currentQuest.GhostSprite;
+            //return;
         }
         
         if (_state == QuestState.Ongoing)

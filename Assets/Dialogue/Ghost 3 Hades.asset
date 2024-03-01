@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - speakerName: Hades
     dialogueText: "*appearing out of nowhere*\r\nHa!\r\nYou son of a gun.\r\nYou
-      did it.\r\nYou bloody did it.\r\nKnew I could count on you.\r"
+      bloody did it.\r\nKnew I could count on you.\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     triggerMusicTrack: 
   - speakerName: Hades
     dialogueText: "ow be a good girl and finish what you\u2019ve started.\r\nYour
-      final task is waiting in the garden.\r\nMwahaha!\r\n*vanishes into thin air*\r"
+      final task is waiting in the cemetery.\r\nMwahaha!\r\n*vanishes into thin air*\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0

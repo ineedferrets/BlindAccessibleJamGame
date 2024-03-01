@@ -51,9 +51,9 @@ MonoBehaviour:
     triggerNewMusic: 0
     triggerMusicTrack: 
   - speakerName: Dr. Charon
-    dialogueText: "Brilliant.\r\nSo, you died during the war.\r\nI know that much
-      from Hades.\r\nAnd even if I didn\u2019t, your clothes would give it away.\r\nThe
-      80\u2019s? Iraq?\r"
+    dialogueText: "Brilliant.\r\nSo, you died during the war. I know that much from
+      Hades.\r\nAnd even if I didn\u2019t, your clothes would give it away. The 80\u2019s?
+      Iraq?\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0

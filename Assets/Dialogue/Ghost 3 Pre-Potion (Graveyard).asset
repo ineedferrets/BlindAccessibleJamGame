@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - speakerName: Narrator
-    dialogueText: "Dr. Charon travels to the graveyard for one final time.\r\nThere\u2019s
-      no ghost in the usual place. Everything is silent.\r\nShe finds a note and
-      a mirror on the ground.\r\nShe picks up the note and reads:\r"
+    dialogueText: "Dr. Charon travels to the graveyard for one final time. There\u2019s
+      no ghost in the usual place. Everything is silent. She finds a note and a mirror
+      on the ground. She picks up the note and reads:\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}
     portraitOnLeft: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
     triggerMusicTrack: 
   - speakerName: Dr. Charon
     dialogueText: "You\u2019re a monster, Hades.\r\n*she throws herself at him*\r\nA
-      heartless *hits him in the chest* Crazy *hits him again*\r\nBloody monster!\r\n*starts
+      heartless *hits him in the chest* Crazy *hits him again* Bloody monster!\r\n*starts
       crying*\r"
     dialogueSpeed: 40
     characterPortrait: {fileID: 0}

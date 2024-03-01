@@ -57,6 +57,7 @@ public class MainMenuManager : MonoBehaviour
     public void OpenOptions()
     {
         OpenMenuGroup(optionsMenuGroup, optionsMenuOpenRead);
+        print("opening options menu");
     }
 
     public void OpenControls()
